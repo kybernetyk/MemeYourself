@@ -13,6 +13,7 @@
 @implementation MemeDetailViewController
 @synthesize imageName;
 @synthesize imageView;
+@synthesize parent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +48,7 @@
 	UIImage *img = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: [self imageName] ]];
 	
 	[imageView setImage: img];
+	
 }
 
 - (void)viewDidUnload
@@ -100,6 +102,20 @@
 	{
 		[self dismissModalViewControllerAnimated:YES];
 	}
+}
+
+- (IBAction) trash: (id) sender
+{
+	NSString *path_img = [MXUtil pathForMeme: [self imageName]];
+	NSString *path_thumb = [MXUtil pathForMeme: [@"thumb_" stringByAppendingString: [self imageName]]];
+	
+	NSError **err;
+	[[NSFileManager defaultManager] removeItemAtPath: path_img error: err];
+	[[NSFileManager defaultManager] removeItemAtPath: path_thumb error: err];
+	
+	[parent setNeedsRefresh: YES];
+	
+	[[self navigationController] popViewControllerAnimated: YES];
 }
 
 @end

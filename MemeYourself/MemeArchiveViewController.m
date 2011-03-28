@@ -26,7 +26,7 @@ enum JPImagePickerControllerPreviewImageSize {
 
 @implementation MemeArchiveViewController
 @synthesize scrollView;
-
+@synthesize needsRefresh;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,13 +59,18 @@ enum JPImagePickerControllerPreviewImageSize {
 
 - (void) viewWillAppear:(BOOL)animated
 {
-	[super viewWillAppear: animated];
-	
 	if (!needsRefresh)
+	{
+		NSLog(@"need no refresh!");
+		[super viewWillAppear: animated];
 		return;
-	for (int i = 0; i < [[scrollView subviews] count]; i++ ) {
-		[[[scrollView subviews] objectAtIndex:i] removeFromSuperview];
 	}
+
+	for (UIButton *b in [scrollView subviews])
+	{
+		[b removeFromSuperview];
+	}
+
 	UIButton *button;
 	UIImage *thumbnail;
 	int images_count = 0;
@@ -80,9 +85,6 @@ enum JPImagePickerControllerPreviewImageSize {
 	int i = 0;
 	for (NSString *fn in e)
 	{
-		NSLog(@"%@",fn);
-		images_count ++;
-		
 		//add only non thumbnail files
 		if ([fn rangeOfString: @"thumb_"].location == NSNotFound)
 			[a insertObject: fn atIndex: 0];
@@ -111,6 +113,9 @@ enum JPImagePickerControllerPreviewImageSize {
 
 		}
 		
+		if (!thumbnail)
+			abort();
+		
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
 		[button setImage:thumbnail forState:UIControlStateNormal];
 		button.showsTouchWhenHighlighted = YES;
@@ -126,6 +131,8 @@ enum JPImagePickerControllerPreviewImageSize {
 		
 		
 		i++;
+		images_count ++;
+
 	}
 	
 	int rows = images_count / THUMBNAIL_COLS;
@@ -138,7 +145,11 @@ enum JPImagePickerControllerPreviewImageSize {
 	scrollView.contentSize = CGSizeMake(self.view.frame.size.width, height);
 	scrollView.clipsToBounds = YES;
 	needsRefresh = NO;
+	[scrollView setNeedsDisplay];
+	[scrollView setNeedsLayout];
+	[super viewWillAppear: animated];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -164,8 +175,11 @@ enum JPImagePickerControllerPreviewImageSize {
 	NSString *fn = [filenames objectForKey: [NSNumber numberWithInt: [sender tag]]];
 	NSLog(@"button %i touched. filename: %@", [sender tag], fn);
 	
+	selectedTag = [sender tag];
+	
 	MemeDetailViewController *mdvc = [[MemeDetailViewController alloc] initWithNibName: @"MemeDetailViewController" bundle: nil];
 	[mdvc setImageName: fn];
+	[mdvc setParent: self];
 	
 	[[self navigationController] pushViewController: mdvc animated: YES];
 	[mdvc release];

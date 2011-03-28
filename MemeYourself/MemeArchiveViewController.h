@@ -15,8 +15,11 @@
 	NSMutableDictionary *filenames;
 	
 	BOOL needsRefresh;
+	
+	int selectedTag;
 }
 
 @property (retain) IBOutlet UIScrollView *scrollView;
+@property (assign) BOOL needsRefresh;
 
 @end
