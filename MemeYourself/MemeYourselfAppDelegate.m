@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	srand(time(0));
 	// Override point for customization after application launch.
 	// Add the tab bar controller's current view as a subview of the window
 	self.window.rootViewController = self.tabBarController;

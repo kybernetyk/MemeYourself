@@ -14,10 +14,14 @@
 		03B1095D1340780900987B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1095C1340780900987B77 /* main.m */; };
 		03B109601340780900987B77 /* MemeYourselfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */; };
 		03B109631340780900987B77 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109611340780900987B77 /* MainWindow.xib */; };
-		03B109661340780900987B77 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109651340780900987B77 /* FirstViewController.m */; };
-		03B109691340780A00987B77 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109681340780A00987B77 /* SecondViewController.m */; };
-		03B1096C1340780A00987B77 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B1096A1340780A00987B77 /* FirstView.xib */; };
-		03B1096F1340780A00987B77 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B1096D1340780A00987B77 /* SecondView.xib */; };
+		03B109791340788200987B77 /* MemeArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109771340788200987B77 /* MemeArchiveViewController.m */; };
+		03B1097A1340788200987B77 /* MemeArchiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109781340788200987B77 /* MemeArchiveViewController.xib */; };
+		03B1097F1340791700987B77 /* MemeCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1097D1340791700987B77 /* MemeCreatorViewController.m */; };
+		03B109801340791700987B77 /* MemeCreatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B1097E1340791700987B77 /* MemeCreatorViewController.xib */; };
+		03B1098B13407F5B00987B77 /* UIImageResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1098A13407F5B00987B77 /* UIImageResizing.m */; };
+		03B1098D13407FB200987B77 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03B1098C13407FB200987B77 /* test.jpg */; };
+		03B10992134084E900987B77 /* MemeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B10990134084E900987B77 /* MemeDetailViewController.m */; };
+		03B10993134084E900987B77 /* MemeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10991134084E900987B77 /* MemeDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,19 +29,25 @@
 		03B1094F1340780900987B77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03B109511340780900987B77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03B109531340780900987B77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		03B109571340780900987B77 /* MemeYourself-Info.plist */ = {isa = PBXFileReference; path = "MemeYourself-Info.plist"; sourceTree = "<group>"; };
+		03B109571340780900987B77 /* MemeYourself-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemeYourself-Info.plist"; sourceTree = "<group>"; };
 		03B109591340780900987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */ = {isa = PBXFileReference; path = "MemeYourself-Prefix.pch"; sourceTree = "<group>"; };
+		03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemeYourself-Prefix.pch"; sourceTree = "<group>"; };
 		03B1095C1340780900987B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */ = {isa = PBXFileReference; path = MemeYourselfAppDelegate.h; sourceTree = "<group>"; };
+		03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemeYourselfAppDelegate.h; sourceTree = "<group>"; };
 		03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemeYourselfAppDelegate.m; sourceTree = "<group>"; };
 		03B109621340780900987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		03B109641340780900987B77 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		03B109651340780900987B77 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		03B109671340780A00987B77 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		03B109681340780A00987B77 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		03B1096B1340780A00987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		03B1096E1340780A00987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		03B109761340788200987B77 /* MemeArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeArchiveViewController.h; sourceTree = "<group>"; };
+		03B109771340788200987B77 /* MemeArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeArchiveViewController.m; sourceTree = "<group>"; };
+		03B109781340788200987B77 /* MemeArchiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeArchiveViewController.xib; sourceTree = "<group>"; };
+		03B1097C1340791700987B77 /* MemeCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeCreatorViewController.h; sourceTree = "<group>"; };
+		03B1097D1340791700987B77 /* MemeCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeCreatorViewController.m; sourceTree = "<group>"; };
+		03B1097E1340791700987B77 /* MemeCreatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeCreatorViewController.xib; sourceTree = "<group>"; };
+		03B1098913407F5B00987B77 /* UIImageResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageResizing.h; sourceTree = "<group>"; };
+		03B1098A13407F5B00987B77 /* UIImageResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageResizing.m; sourceTree = "<group>"; };
+		03B1098C13407FB200987B77 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		03B1098F134084E900987B77 /* MemeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeDetailViewController.h; sourceTree = "<group>"; };
+		03B10990134084E900987B77 /* MemeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeDetailViewController.m; sourceTree = "<group>"; };
+		03B10991134084E900987B77 /* MemeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +94,11 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				03B1097B1340790500987B77 /* Meme Creator View */,
+				03B109751340784800987B77 /* Archive View */,
 				03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */,
 				03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */,
 				03B109611340780900987B77 /* MainWindow.xib */,
-				03B109641340780900987B77 /* FirstViewController.h */,
-				03B109651340780900987B77 /* FirstViewController.m */,
-				03B109671340780A00987B77 /* SecondViewController.h */,
-				03B109681340780A00987B77 /* SecondViewController.m */,
-				03B1096A1340780A00987B77 /* FirstView.xib */,
-				03B1096D1340780A00987B77 /* SecondView.xib */,
 				03B109561340780900987B77 /* Supporting Files */,
 			);
 			path = MemeYourself;
@@ -101,12 +107,46 @@
 		03B109561340780900987B77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03B1098C13407FB200987B77 /* test.jpg */,
+				03B1098913407F5B00987B77 /* UIImageResizing.h */,
+				03B1098A13407F5B00987B77 /* UIImageResizing.m */,
 				03B109571340780900987B77 /* MemeYourself-Info.plist */,
 				03B109581340780900987B77 /* InfoPlist.strings */,
 				03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */,
 				03B1095C1340780900987B77 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03B109751340784800987B77 /* Archive View */ = {
+			isa = PBXGroup;
+			children = (
+				03B1098E134084D900987B77 /* Meme Detail View */,
+				03B109761340788200987B77 /* MemeArchiveViewController.h */,
+				03B109771340788200987B77 /* MemeArchiveViewController.m */,
+				03B109781340788200987B77 /* MemeArchiveViewController.xib */,
+			);
+			name = "Archive View";
+			sourceTree = "<group>";
+		};
+		03B1097B1340790500987B77 /* Meme Creator View */ = {
+			isa = PBXGroup;
+			children = (
+				03B1097C1340791700987B77 /* MemeCreatorViewController.h */,
+				03B1097D1340791700987B77 /* MemeCreatorViewController.m */,
+				03B1097E1340791700987B77 /* MemeCreatorViewController.xib */,
+			);
+			name = "Meme Creator View";
+			sourceTree = "<group>";
+		};
+		03B1098E134084D900987B77 /* Meme Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				03B1098F134084E900987B77 /* MemeDetailViewController.h */,
+				03B10990134084E900987B77 /* MemeDetailViewController.m */,
+				03B10991134084E900987B77 /* MemeDetailViewController.xib */,
+			);
+			name = "Meme Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +198,10 @@
 			files = (
 				03B1095A1340780900987B77 /* InfoPlist.strings in Resources */,
 				03B109631340780900987B77 /* MainWindow.xib in Resources */,
-				03B1096C1340780A00987B77 /* FirstView.xib in Resources */,
-				03B1096F1340780A00987B77 /* SecondView.xib in Resources */,
+				03B1097A1340788200987B77 /* MemeArchiveViewController.xib in Resources */,
+				03B109801340791700987B77 /* MemeCreatorViewController.xib in Resources */,
+				03B1098D13407FB200987B77 /* test.jpg in Resources */,
+				03B10993134084E900987B77 /* MemeDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +214,10 @@
 			files = (
 				03B1095D1340780900987B77 /* main.m in Sources */,
 				03B109601340780900987B77 /* MemeYourselfAppDelegate.m in Sources */,
-				03B109661340780900987B77 /* FirstViewController.m in Sources */,
-				03B109691340780A00987B77 /* SecondViewController.m in Sources */,
+				03B109791340788200987B77 /* MemeArchiveViewController.m in Sources */,
+				03B1097F1340791700987B77 /* MemeCreatorViewController.m in Sources */,
+				03B1098B13407F5B00987B77 /* UIImageResizing.m in Sources */,
+				03B10992134084E900987B77 /* MemeDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,22 +238,6 @@
 				03B109621340780900987B77 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		03B1096A1340780A00987B77 /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03B1096B1340780A00987B77 /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
-		03B1096D1340780A00987B77 /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03B1096E1340780A00987B77 /* en */,
-			);
-			name = SecondView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
