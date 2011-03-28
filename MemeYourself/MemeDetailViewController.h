@@ -18,4 +18,6 @@
 @property (retain) IBOutlet UIImageView *imageView;
 @property (readwrite, retain) NSString *imageName;
 
+- (IBAction) share: (id) sender;
+
 @end

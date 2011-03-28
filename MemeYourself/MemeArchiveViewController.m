@@ -87,13 +87,35 @@ enum JPImagePickerControllerPreviewImageSize {
 	}
 	
 	for (NSString *fn in a)
-	{	
+	{
+		BOOL createThumb = NO;
+		thumbnail = nil;
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
+
+		if ([fn rangeOfString: @"thumb_"].location == -1)
+		{
+			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
+			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn_t]];
+		}
+		else
+		{
+			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];
+			NSLog(@"thumb file: %@", fn);
+		}
 		
-		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];
-		thumbnail = [thumbnail scaleAndCropToSize: 
-					 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
-									 onlyIfNeeded:NO];
+		if (!thumbnail)
+		{
+			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];	
+			createThumb = YES;
+			thumbnail = [thumbnail scaleAndCropToSize: 
+						 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
+										 onlyIfNeeded:NO];
+			NSData *d = UIImagePNGRepresentation(thumbnail);
+			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
+			[d writeToFile: [MXUtil pathForMeme: fn_t] atomically: YES];
+			NSLog(@"no thumb: %@", fn_t);
+
+		}
 		
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
 		[button setImage:thumbnail forState:UIControlStateNormal];

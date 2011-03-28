@@ -26,6 +26,7 @@
 		03B109A61340B16000987B77 /* SelectMemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109A41340B16000987B77 /* SelectMemeViewController.m */; };
 		03B109A71340B16000987B77 /* SelectMemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109A51340B16000987B77 /* SelectMemeViewController.xib */; };
 		03B109AA1340B26B00987B77 /* MXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109A91340B26B00987B77 /* MXUtil.m */; };
+		03B109AC1340D01000987B77 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109AB1340D00F00987B77 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		03B109A51340B16000987B77 /* SelectMemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectMemeViewController.xib; sourceTree = "<group>"; };
 		03B109A81340B26B00987B77 /* MXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUtil.h; sourceTree = "<group>"; };
 		03B109A91340B26B00987B77 /* MXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUtil.m; sourceTree = "<group>"; };
+		03B109AB1340D00F00987B77 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B109AC1340D01000987B77 /* MessageUI.framework in Frameworks */,
 				03B109501340780900987B77 /* UIKit.framework in Frameworks */,
 				03B109521340780900987B77 /* Foundation.framework in Frameworks */,
 				03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +98,7 @@
 		03B1094E1340780900987B77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03B109AB1340D00F00987B77 /* MessageUI.framework */,
 				03B1094F1340780900987B77 /* UIKit.framework */,
 				03B109511340780900987B77 /* Foundation.framework */,
 				03B109531340780900987B77 /* CoreGraphics.framework */,

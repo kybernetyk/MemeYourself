@@ -7,7 +7,8 @@
 //
 
 #import "MemeDetailViewController.h"
-
+#import <MessageUI/MFMailComposeViewController.h>
+#import <MessageUI/MFMessageComposeViewController.h>
 
 @implementation MemeDetailViewController
 @synthesize imageName;
@@ -62,4 +63,44 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction) share: (id) sender
+{
+	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+	picker.mailComposeDelegate = self;
+	
+	[picker setSubject:@"Hello"];
+	
+	
+	// Set up recipients
+	NSArray *toRecipients = [NSArray arrayWithObject:@"jszpilewski@me.com"]; 
+	
+	[picker setToRecipients:toRecipients];
+	
+	// Attach an image to the email
+	NSString *path = [MXUtil pathForMeme: [self imageName]];
+	NSData *myData = [NSData dataWithContentsOfFile:path];
+	[picker addAttachmentData:myData mimeType:@"image/png" fileName: [self imageName]];
+	
+	// Fill out the email body text
+	NSString *emailBody = @"It is raining";
+	[picker setMessageBody:emailBody isHTML:NO];
+	
+	[self presentModalViewController:picker animated:YES];
+	[picker release];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+		  didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+	if (result == MFMailComposeResultFailed && error)
+	{
+		// Show error : [error localizedDescription];
+	}
+	else
+	{
+		[self dismissModalViewControllerAnimated:YES];
+	}
+}
+
 @end
+
