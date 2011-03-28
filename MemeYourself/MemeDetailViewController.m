@@ -43,11 +43,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *fn = [documentsDirectory stringByAppendingPathComponent: [self imageName]];
-	
-	UIImage *img = [UIImage imageWithContentsOfFile: fn];
+	UIImage *img = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: [self imageName] ]];
 	
 	[imageView setImage: img];
 }

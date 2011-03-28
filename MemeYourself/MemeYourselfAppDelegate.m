@@ -18,6 +18,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	srand(time(0));
+	
+//	- (BOOL)createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error
+
+	NSError **err;
+	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil memeDir] withIntermediateDirectories: YES attributes:nil error:err];
+	
+	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil imageDir] withIntermediateDirectories: YES attributes:nil error:err];
+	
 	// Override point for customization after application launch.
 	// Add the tab bar controller's current view as a subview of the window
 	self.window.rootViewController = self.tabBarController;

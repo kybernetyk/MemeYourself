@@ -7,15 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MXOutlineLabel.h"
 
 @interface MemeCreatorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 {
-    
+    IBOutlet MXOutlineLabel *upperLabel;
+	IBOutlet MXOutlineLabel *lowerLabel;
+	
+	UITextField *field;
+	
 	UIImageView *imageView;
+	
+	NSString *currentFilename;
 }
 @property (retain) IBOutlet UIImageView *imageView;
 
+@property (readwrite, retain) NSString *currentFilename;
+
 - (IBAction) takePicture: (id) sender;
+
+- (IBAction) trash: (id) sender;
+- (IBAction) save: (id) sender;
 
 @end

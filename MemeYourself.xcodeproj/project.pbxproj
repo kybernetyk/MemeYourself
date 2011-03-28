@@ -22,6 +22,10 @@
 		03B1098D13407FB200987B77 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03B1098C13407FB200987B77 /* test.jpg */; };
 		03B10992134084E900987B77 /* MemeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B10990134084E900987B77 /* MemeDetailViewController.m */; };
 		03B10993134084E900987B77 /* MemeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B10991134084E900987B77 /* MemeDetailViewController.xib */; };
+		03B1099713409F1F00987B77 /* MXOutlineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1099613409F1F00987B77 /* MXOutlineLabel.m */; };
+		03B109A61340B16000987B77 /* SelectMemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109A41340B16000987B77 /* SelectMemeViewController.m */; };
+		03B109A71340B16000987B77 /* SelectMemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109A51340B16000987B77 /* SelectMemeViewController.xib */; };
+		03B109AA1340B26B00987B77 /* MXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109A91340B26B00987B77 /* MXUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,13 @@
 		03B1098F134084E900987B77 /* MemeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeDetailViewController.h; sourceTree = "<group>"; };
 		03B10990134084E900987B77 /* MemeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeDetailViewController.m; sourceTree = "<group>"; };
 		03B10991134084E900987B77 /* MemeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeDetailViewController.xib; sourceTree = "<group>"; };
+		03B1099513409F1F00987B77 /* MXOutlineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXOutlineLabel.h; sourceTree = "<group>"; };
+		03B1099613409F1F00987B77 /* MXOutlineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXOutlineLabel.m; sourceTree = "<group>"; };
+		03B109A31340B16000987B77 /* SelectMemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMemeViewController.h; sourceTree = "<group>"; };
+		03B109A41340B16000987B77 /* SelectMemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMemeViewController.m; sourceTree = "<group>"; };
+		03B109A51340B16000987B77 /* SelectMemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectMemeViewController.xib; sourceTree = "<group>"; };
+		03B109A81340B26B00987B77 /* MXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUtil.h; sourceTree = "<group>"; };
+		03B109A91340B26B00987B77 /* MXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +105,7 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				03B1099413409F0A00987B77 /* Outline Label */,
 				03B1097B1340790500987B77 /* Meme Creator View */,
 				03B109751340784800987B77 /* Archive View */,
 				03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */,
@@ -114,6 +126,8 @@
 				03B109581340780900987B77 /* InfoPlist.strings */,
 				03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */,
 				03B1095C1340780900987B77 /* main.m */,
+				03B109A81340B26B00987B77 /* MXUtil.h */,
+				03B109A91340B26B00987B77 /* MXUtil.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,6 +146,7 @@
 		03B1097B1340790500987B77 /* Meme Creator View */ = {
 			isa = PBXGroup;
 			children = (
+				03B109A21340B12700987B77 /* Select Meme View */,
 				03B1097C1340791700987B77 /* MemeCreatorViewController.h */,
 				03B1097D1340791700987B77 /* MemeCreatorViewController.m */,
 				03B1097E1340791700987B77 /* MemeCreatorViewController.xib */,
@@ -147,6 +162,25 @@
 				03B10991134084E900987B77 /* MemeDetailViewController.xib */,
 			);
 			name = "Meme Detail View";
+			sourceTree = "<group>";
+		};
+		03B1099413409F0A00987B77 /* Outline Label */ = {
+			isa = PBXGroup;
+			children = (
+				03B1099513409F1F00987B77 /* MXOutlineLabel.h */,
+				03B1099613409F1F00987B77 /* MXOutlineLabel.m */,
+			);
+			name = "Outline Label";
+			sourceTree = "<group>";
+		};
+		03B109A21340B12700987B77 /* Select Meme View */ = {
+			isa = PBXGroup;
+			children = (
+				03B109A31340B16000987B77 /* SelectMemeViewController.h */,
+				03B109A41340B16000987B77 /* SelectMemeViewController.m */,
+				03B109A51340B16000987B77 /* SelectMemeViewController.xib */,
+			);
+			name = "Select Meme View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +236,7 @@
 				03B109801340791700987B77 /* MemeCreatorViewController.xib in Resources */,
 				03B1098D13407FB200987B77 /* test.jpg in Resources */,
 				03B10993134084E900987B77 /* MemeDetailViewController.xib in Resources */,
+				03B109A71340B16000987B77 /* SelectMemeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +253,9 @@
 				03B1097F1340791700987B77 /* MemeCreatorViewController.m in Sources */,
 				03B1098B13407F5B00987B77 /* UIImageResizing.m in Sources */,
 				03B10992134084E900987B77 /* MemeDetailViewController.m in Sources */,
+				03B1099713409F1F00987B77 /* MXOutlineLabel.m in Sources */,
+				03B109A61340B16000987B77 /* SelectMemeViewController.m in Sources */,
+				03B109AA1340B26B00987B77 /* MXUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
