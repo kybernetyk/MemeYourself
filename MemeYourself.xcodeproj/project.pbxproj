@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03B109501340780900987B77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1094F1340780900987B77 /* UIKit.framework */; };
+		03B109521340780900987B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109511340780900987B77 /* Foundation.framework */; };
+		03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109531340780900987B77 /* CoreGraphics.framework */; };
+		03B1095A1340780900987B77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03B109581340780900987B77 /* InfoPlist.strings */; };
+		03B1095D1340780900987B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1095C1340780900987B77 /* main.m */; };
+		03B109601340780900987B77 /* MemeYourselfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */; };
+		03B109631340780900987B77 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109611340780900987B77 /* MainWindow.xib */; };
+		03B109661340780900987B77 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109651340780900987B77 /* FirstViewController.m */; };
+		03B109691340780A00987B77 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109681340780A00987B77 /* SecondViewController.m */; };
+		03B1096C1340780A00987B77 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B1096A1340780A00987B77 /* FirstView.xib */; };
+		03B1096F1340780A00987B77 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B1096D1340780A00987B77 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03B1094B1340780900987B77 /* MemeYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B1094F1340780900987B77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		03B109511340780900987B77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03B109531340780900987B77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		03B109571340780900987B77 /* MemeYourself-Info.plist */ = {isa = PBXFileReference; path = "MemeYourself-Info.plist"; sourceTree = "<group>"; };
+		03B109591340780900987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */ = {isa = PBXFileReference; path = "MemeYourself-Prefix.pch"; sourceTree = "<group>"; };
+		03B1095C1340780900987B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */ = {isa = PBXFileReference; path = MemeYourselfAppDelegate.h; sourceTree = "<group>"; };
+		03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemeYourselfAppDelegate.m; sourceTree = "<group>"; };
+		03B109621340780900987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		03B109641340780900987B77 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		03B109651340780900987B77 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		03B109671340780A00987B77 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		03B109681340780A00987B77 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		03B1096B1340780A00987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		03B1096E1340780A00987B77 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03B109481340780900987B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B109501340780900987B77 /* UIKit.framework in Frameworks */,
+				03B109521340780900987B77 /* Foundation.framework in Frameworks */,
+				03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03B109401340780900987B77 = {
+			isa = PBXGroup;
+			children = (
+				03B109551340780900987B77 /* MemeYourself */,
+				03B1094E1340780900987B77 /* Frameworks */,
+				03B1094C1340780900987B77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03B1094C1340780900987B77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03B1094B1340780900987B77 /* MemeYourself.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03B1094E1340780900987B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03B1094F1340780900987B77 /* UIKit.framework */,
+				03B109511340780900987B77 /* Foundation.framework */,
+				03B109531340780900987B77 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03B109551340780900987B77 /* MemeYourself */ = {
+			isa = PBXGroup;
+			children = (
+				03B1095E1340780900987B77 /* MemeYourselfAppDelegate.h */,
+				03B1095F1340780900987B77 /* MemeYourselfAppDelegate.m */,
+				03B109611340780900987B77 /* MainWindow.xib */,
+				03B109641340780900987B77 /* FirstViewController.h */,
+				03B109651340780900987B77 /* FirstViewController.m */,
+				03B109671340780A00987B77 /* SecondViewController.h */,
+				03B109681340780A00987B77 /* SecondViewController.m */,
+				03B1096A1340780A00987B77 /* FirstView.xib */,
+				03B1096D1340780A00987B77 /* SecondView.xib */,
+				03B109561340780900987B77 /* Supporting Files */,
+			);
+			path = MemeYourself;
+			sourceTree = "<group>";
+		};
+		03B109561340780900987B77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03B109571340780900987B77 /* MemeYourself-Info.plist */,
+				03B109581340780900987B77 /* InfoPlist.strings */,
+				03B1095B1340780900987B77 /* MemeYourself-Prefix.pch */,
+				03B1095C1340780900987B77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03B1094A1340780900987B77 /* MemeYourself */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B109721340780A00987B77 /* Build configuration list for PBXNativeTarget "MemeYourself" */;
+			buildPhases = (
+				03B109471340780900987B77 /* Sources */,
+				03B109481340780900987B77 /* Frameworks */,
+				03B109491340780900987B77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemeYourself;
+			productName = MemeYourself;
+			productReference = 03B1094B1340780900987B77 /* MemeYourself.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03B109421340780900987B77 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 03B109451340780900987B77 /* Build configuration list for PBXProject "MemeYourself" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03B109401340780900987B77;
+			productRefGroup = 03B1094C1340780900987B77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03B1094A1340780900987B77 /* MemeYourself */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03B109491340780900987B77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B1095A1340780900987B77 /* InfoPlist.strings in Resources */,
+				03B109631340780900987B77 /* MainWindow.xib in Resources */,
+				03B1096C1340780A00987B77 /* FirstView.xib in Resources */,
+				03B1096F1340780A00987B77 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03B109471340780900987B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B1095D1340780900987B77 /* main.m in Sources */,
+				03B109601340780900987B77 /* MemeYourselfAppDelegate.m in Sources */,
+				03B109661340780900987B77 /* FirstViewController.m in Sources */,
+				03B109691340780A00987B77 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		03B109581340780900987B77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B109591340780900987B77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		03B109611340780900987B77 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B109621340780900987B77 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		03B1096A1340780A00987B77 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B1096B1340780A00987B77 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		03B1096D1340780A00987B77 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03B1096E1340780A00987B77 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03B109701340780A00987B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		03B109711340780A00987B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		03B109731340780A00987B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
+				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		03B109741340780A00987B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
+				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03B109451340780900987B77 /* Build configuration list for PBXProject "MemeYourself" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B109701340780A00987B77 /* Debug */,
+				03B109711340780A00987B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B109721340780A00987B77 /* Build configuration list for PBXNativeTarget "MemeYourself" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B109731340780A00987B77 /* Debug */,
+				03B109741340780A00987B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03B109421340780900987B77 /* Project object */;
+}
