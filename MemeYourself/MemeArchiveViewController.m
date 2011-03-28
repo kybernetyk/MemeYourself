@@ -54,8 +54,15 @@ enum JPImagePickerControllerPreviewImageSize {
 
 - (void) newMemeAdded: (NSNotification *) notification
 {
-	NSLog(@"new meme added!!!");
+	needsRefresh = YES;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear: animated];
 	
+	if (!needsRefresh)
+		return;
 	for (int i = 0; i < [[scrollView subviews] count]; i++ ) {
 		[[[scrollView subviews] objectAtIndex:i] removeFromSuperview];
 	}
@@ -71,10 +78,19 @@ enum JPImagePickerControllerPreviewImageSize {
 	
 	NSDirectoryEnumerator *e = [[NSFileManager defaultManager] enumeratorAtPath: documentsDirectory];
 	
+	NSMutableArray *a = [NSMutableArray array];
+	
 	int i = 0;
 	for (NSString *fn in e)
 	{
 		NSLog(@"%@",fn);
+		images_count ++;
+		
+		[a insertObject: fn atIndex: 0];
+	}
+	
+	for (NSString *fn in a)
+	{	
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 		
 		thumbnail = [UIImage imageWithContentsOfFile: [documentsDirectory stringByAppendingPathComponent: fn]];
@@ -95,7 +111,7 @@ enum JPImagePickerControllerPreviewImageSize {
 		
 		[scrollView addSubview:button];
 		
-		images_count ++;
+		
 		i++;
 	}
 	
@@ -108,7 +124,7 @@ enum JPImagePickerControllerPreviewImageSize {
 	
 	scrollView.contentSize = CGSizeMake(self.view.frame.size.width, height);
 	scrollView.clipsToBounds = YES;
-
+	needsRefresh = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -127,7 +143,7 @@ enum JPImagePickerControllerPreviewImageSize {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	[self newMemeAdded: self];
+	needsRefresh = YES;
 }
 
 - (void) buttonTouched: (id) sender

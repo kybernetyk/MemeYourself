@@ -13,6 +13,8 @@
 	UIScrollView *scrollView;
 	
 	NSMutableDictionary *filenames;
+	
+	BOOL needsRefresh;
 }
 
 @property (retain) IBOutlet UIScrollView *scrollView;

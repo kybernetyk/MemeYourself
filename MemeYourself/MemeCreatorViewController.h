@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MemeCreatorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MemeCreatorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 {
     
+	UIImageView *imageView;
 }
+@property (retain) IBOutlet UIImageView *imageView;
 
 - (IBAction) takePicture: (id) sender;
 

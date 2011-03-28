@@ -10,6 +10,7 @@
 
 
 @implementation MemeCreatorViewController
+@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +40,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
 }
 
 - (void)viewDidUnload
@@ -47,6 +47,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.imageView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -57,11 +58,38 @@
 
 - (void) takePicture: (id) sender
 {
+	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle: @"LOLZ" 
+													   delegate: self 
+											  cancelButtonTitle: @"cancel"
+										 destructiveButtonTitle: nil
+											  otherButtonTitles: @"Take Photo", @"Photo Archive", nil];
+	
+	
+	[sheet showFromBarButtonItem: sender animated: YES];
+	
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == [actionSheet cancelButtonIndex])
+		return;
+
+	NSLog(@"%i", buttonIndex);
+	
 	UIImagePickerController *c = [[UIImagePickerController alloc] init];
+	[c setAllowsEditing: YES];
 	[c setDelegate: self];
+
+	if (buttonIndex == 0)
+		[c setSourceType: UIImagePickerControllerSourceTypeCamera];
+	else
+		[c setSourceType: UIImagePickerControllerSourceTypePhotoLibrary];
+	
 	[self presentModalViewController: c animated: YES];
 	[c release];
 }
+
+
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -82,11 +110,18 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	
-	NSString *fn = [NSString stringWithFormat: @"%.2i-%.2i-%.2i.png", rand()%255, rand()%255, rand()%255];
+	NSDate *now = [NSDate date];
+	int i = [now timeIntervalSince1970];
+	
+	NSString *fn = [NSString stringWithFormat: @"%i.png", i];
 	[d writeToFile: [documentsDirectory stringByAppendingPathComponent: fn] atomically: YES];
 	NSLog(@"%@", fn);
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 	[center postNotificationName: kNewMemeAdded object: nil];
 
+	
+	image = [UIImage imageWithContentsOfFile: [documentsDirectory stringByAppendingPathComponent: fn]];
+	
+	[imageView setImage: image];
 }
 @end
