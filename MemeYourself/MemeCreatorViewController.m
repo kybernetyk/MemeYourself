@@ -109,7 +109,14 @@
 	[c release];
 }
 
-
+-(UIImage *)imageWithImage:(UIImage *)image covertToSize:(CGSize)size 
+{
+	UIGraphicsBeginImageContext(size);
+	[image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+	UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();    
+	UIGraphicsEndImageContext();
+	return destImage;
+}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -120,6 +127,12 @@
 		image = editedImage;
 	
 	[self dismissModalViewControllerAnimated: YES];
+	
+	if (image.size.width < 640 || image.size.height < 640)
+	{
+		CGSize sz = CGSizeMake(640, 640);
+		image = [self imageWithImage: image covertToSize: sz];
+	}
 	
 	NSLog(@"size: %f,%f", image.size.width, image.size.height);
 

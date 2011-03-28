@@ -83,7 +83,9 @@ enum JPImagePickerControllerPreviewImageSize {
 		NSLog(@"%@",fn);
 		images_count ++;
 		
-		[a insertObject: fn atIndex: 0];
+		//add only non thumbnail files
+		if ([fn rangeOfString: @"thumb_"].location == NSNotFound)
+			[a insertObject: fn atIndex: 0];
 	}
 	
 	for (NSString *fn in a)
@@ -92,17 +94,9 @@ enum JPImagePickerControllerPreviewImageSize {
 		thumbnail = nil;
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 
-		if ([fn rangeOfString: @"thumb_"].location == -1)
-		{
-			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
-			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn_t]];
-		}
-		else
-		{
-			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];
-			NSLog(@"thumb file: %@", fn);
-		}
-		
+		NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
+		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn_t]];
+
 		if (!thumbnail)
 		{
 			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];	
@@ -113,7 +107,7 @@ enum JPImagePickerControllerPreviewImageSize {
 			NSData *d = UIImagePNGRepresentation(thumbnail);
 			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
 			[d writeToFile: [MXUtil pathForMeme: fn_t] atomically: YES];
-			NSLog(@"no thumb: %@", fn_t);
+			NSLog(@"no thumb. will create one: %@", fn_t);
 
 		}
 		
