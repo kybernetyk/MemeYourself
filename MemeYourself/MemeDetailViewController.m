@@ -76,12 +76,32 @@
 
 - (IBAction) share: (id) sender
 {
+	NSString *uploaderName = nil;
+
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+	int i = [defs integerForKey: @"hoster"];
+	
+	id ret = nil;
+	switch (i) 
+	{
+		case kHtlr:
+			uploaderName = @"htlr.org";
+			break;
+		case kImgur:
+			ret = @"imgur.com";
+			break;
+		default:
+			ret = @"htlr.org";
+			break;
+	}
+	
+
 	
 	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle: @"Share" 
 													   delegate: self 
 											  cancelButtonTitle: @"cancel"
 										 destructiveButtonTitle: nil
-											  otherButtonTitles: @"EMail", @"Facebook", @"Upload", @"Reddit", nil];
+											  otherButtonTitles: @"EMail", @"Facebook", uploaderName, @"Reddit", nil];
 	
 	
 	[sheet showFromBarButtonItem: sender animated: YES];
@@ -195,7 +215,6 @@
 - (id) activeUploader
 {
 	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
-	
 	int i = [defs integerForKey: @"hoster"];
 	
 	id ret = nil;
