@@ -23,7 +23,6 @@
 
 	NSError **err;
 	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil memeDir] withIntermediateDirectories: YES attributes:nil error:err];
-	
 	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil imageDir] withIntermediateDirectories: YES attributes:nil error:err];
 	
 	// Override point for customization after application launch.

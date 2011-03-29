@@ -9,6 +9,7 @@
 #import "MemeCreatorViewController.h"
 #import "MXOutlineLabel.h"
 #import "SelectMemeViewController.h"
+#import "MemeTemplateViewController.h"
 
 @implementation MemeCreatorViewController
 @synthesize imageView;
@@ -73,7 +74,7 @@
 													   delegate: self 
 											  cancelButtonTitle: @"cancel"
 										 destructiveButtonTitle: nil
-											  otherButtonTitles: @"Take Photo", @"Camera Roll", @"Previous Memes", nil];
+											  otherButtonTitles: @"Take Photo", @"Camera Roll", @"Previous Memes", @"From Template", nil];
 	
 	
 	[sheet showFromBarButtonItem: sender animated: YES];
@@ -89,6 +90,15 @@
 	if (buttonIndex == 2)
 	{
 		SelectMemeViewController *vc = [[SelectMemeViewController alloc] initWithNibName: @"SelectMemeViewController" bundle: nil];
+		[vc setDelegate: self];
+		[self presentModalViewController: vc animated: YES];
+		[vc release];
+		return;
+	}
+	
+	if (buttonIndex == 3)
+	{
+		MemeTemplateViewController *vc = [[MemeTemplateViewController alloc] initWithNibName: @"MemeTemplateViewController" bundle:nil];
 		[vc setDelegate: self];
 		[self presentModalViewController: vc animated: YES];
 		[vc release];
@@ -260,8 +270,33 @@
 	UIImage *image = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn]];
 	[imageView setImage: image];
 	
+	if (image.size.width < 640 || image.size.height < 640)
+	{
+		CGSize sz = CGSizeMake(640, 640);
+		image = [self imageWithImage: image covertToSize: sz];
+	}
+
 	[self setCurrentFilename: fn];
 }
+
+-(void)memeTemplateViewController: (MemeTemplateViewController *) vc didReturnImageFilename: (NSString *) fn
+{
+	UIImage *image = [UIImage imageWithContentsOfFile: [MXUtil pathForTemplate: fn]];
+	
+	if (image.size.width < 640 || image.size.height < 640)
+	{
+		CGSize sz = CGSizeMake(640, 640);
+		image = [self imageWithImage: image covertToSize: sz];
+	}
+
+	NSLog(@"template: %@", [MXUtil pathForTemplate: fn]);
+	[imageView setImage: image];
+	
+	[self setCurrentFilename: fn];
+}
+
+
+
 
 - (void) trash:(id)sender
 {

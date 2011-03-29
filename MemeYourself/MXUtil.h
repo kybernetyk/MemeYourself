@@ -15,8 +15,11 @@
 
 + (NSString *) pathForMeme: (NSString *) memeFilename;
 + (NSString *) pathForImage: (NSString *) imageFilename;
++ (NSString *) pathForTemplate: (NSString *) templateFilename;
 
 + (NSString *) memeDir;
 + (NSString *) imageDir;
++ (NSString *) templateDir;
+
 
 @end

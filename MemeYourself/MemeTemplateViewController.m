@@ -1,12 +1,12 @@
 //
-//  SelectMemeViewController.m
+//  MemeTemplateViewController.m
 //  MemeYourself
 //
-//  Created by jrk on 28/3/11.
+//  Created by jrk on 29/3/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SelectMemeViewController.h"
+#import "MemeTemplateViewController.h"
 #import "UIImageResizing.h"
 enum JPImagePickerControllerThumbnailSize {
 	kJPImagePickerControllerThumbnailSizeWidth = 75,
@@ -22,7 +22,8 @@ enum JPImagePickerControllerPreviewImageSize {
 #define THUMBNAIL_COLS 4
 
 
-@implementation SelectMemeViewController
+
+@implementation MemeTemplateViewController
 @synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -66,7 +67,7 @@ enum JPImagePickerControllerPreviewImageSize {
 	[filenames release];
 	filenames = [[NSMutableDictionary alloc] init];
 	
-	NSDirectoryEnumerator *e = [[NSFileManager defaultManager] enumeratorAtPath: [MXUtil imageDir]];
+	NSDirectoryEnumerator *e = [[NSFileManager defaultManager] enumeratorAtPath: [MXUtil templateDir]];
 	
 	NSMutableArray *a = [NSMutableArray array];
 	
@@ -85,18 +86,18 @@ enum JPImagePickerControllerPreviewImageSize {
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 		
 		NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
-		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn_t]];
+		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForTemplate: fn_t]];
 		
 		if (!thumbnail)
 		{
-			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn]];	
+			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForTemplate: fn]];	
 			createThumb = YES;
 			thumbnail = [thumbnail scaleAndCropToSize: 
 						 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
 										 onlyIfNeeded:NO];
 			NSData *d = UIImagePNGRepresentation(thumbnail);
 			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
-			[d writeToFile: [MXUtil pathForImage: fn_t] atomically: YES];
+		//	[d writeToFile: [MXUtil pathForImage: fn_t] atomically: YES];
 			NSLog(@"no thumb. will create one: %@", fn_t);
 			
 		}
@@ -154,9 +155,10 @@ enum JPImagePickerControllerPreviewImageSize {
 	NSString *fn = [filenames objectForKey: [NSNumber numberWithInt: [sender tag]]];
 	NSLog(@"button %i touched. filename: %@", [sender tag], fn);
 	NSLog(@"delegate: %@", delegate);
-	[delegate selectMemeViewController: self didReturnImageFilename: fn];
+	[delegate memeTemplateViewController: self didReturnImageFilename: fn];
+
+
 	[self dismissModalViewControllerAnimated: YES];
 }
-
 
 @end

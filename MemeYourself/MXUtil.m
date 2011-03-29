@@ -52,4 +52,14 @@
 }
 
 
++ (NSString *) pathForTemplate: (NSString *) templateFilename
+{
+	return [[MXUtil templateDir] stringByAppendingPathComponent: templateFilename];
+}
+
++ (NSString *) templateDir
+{
+
+	return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"templates"];
+}
 @end

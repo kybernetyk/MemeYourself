@@ -24,6 +24,9 @@
 		030E94781341BCCD0007A133 /* FacebookSubmitController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 030E94761341BCCD0007A133 /* FacebookSubmitController.mm */; };
 		030E94791341BCCD0007A133 /* FacebookSubmitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E94771341BCCD0007A133 /* FacebookSubmitController.xib */; };
 		030E947C1341BECC0007A133 /* NotificationSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 030E947B1341BECC0007A133 /* NotificationSystem.mm */; };
+		030E94811341D07B0007A133 /* MemeTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E947F1341D07B0007A133 /* MemeTemplateViewController.m */; };
+		030E94821341D07B0007A133 /* MemeTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E94801341D07B0007A133 /* MemeTemplateViewController.xib */; };
+		030E94841341D2D10007A133 /* templates in Resources */ = {isa = PBXBuildFile; fileRef = 030E94831341D2CF0007A133 /* templates */; };
 		03B109501340780900987B77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1094F1340780900987B77 /* UIKit.framework */; };
 		03B109521340780900987B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109511340780900987B77 /* Foundation.framework */; };
 		03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109531340780900987B77 /* CoreGraphics.framework */; };
@@ -81,6 +84,10 @@
 		030E94771341BCCD0007A133 /* FacebookSubmitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookSubmitController.xib; sourceTree = "<group>"; };
 		030E947A1341BECC0007A133 /* NotificationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationSystem.h; sourceTree = "<group>"; };
 		030E947B1341BECC0007A133 /* NotificationSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NotificationSystem.mm; sourceTree = "<group>"; };
+		030E947E1341D07B0007A133 /* MemeTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeTemplateViewController.h; sourceTree = "<group>"; };
+		030E947F1341D07B0007A133 /* MemeTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeTemplateViewController.m; sourceTree = "<group>"; };
+		030E94801341D07B0007A133 /* MemeTemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemeTemplateViewController.xib; sourceTree = "<group>"; };
+		030E94831341D2CF0007A133 /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
 		03B1094B1340780900987B77 /* MemeYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B1094F1340780900987B77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03B109511340780900987B77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,6 +203,16 @@
 			path = "Facebook Sumbit Controller";
 			sourceTree = "<group>";
 		};
+		030E947D1341D0670007A133 /* Meme Template View */ = {
+			isa = PBXGroup;
+			children = (
+				030E947E1341D07B0007A133 /* MemeTemplateViewController.h */,
+				030E947F1341D07B0007A133 /* MemeTemplateViewController.m */,
+				030E94801341D07B0007A133 /* MemeTemplateViewController.xib */,
+			);
+			name = "Meme Template View";
+			sourceTree = "<group>";
+		};
 		03B109401340780900987B77 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,7 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				030E94831341D2CF0007A133 /* templates */,
 				030E94381341B5170007A133 /* Uploaders */,
 				03B1099413409F0A00987B77 /* Outline Label */,
 				03B1097B1340790500987B77 /* Meme Creator View */,
@@ -275,6 +293,7 @@
 		03B1097B1340790500987B77 /* Meme Creator View */ = {
 			isa = PBXGroup;
 			children = (
+				030E947D1341D0670007A133 /* Meme Template View */,
 				03B109A21340B12700987B77 /* Select Meme View */,
 				03B1097C1340791700987B77 /* MemeCreatorViewController.h */,
 				03B1097D1340791700987B77 /* MemeCreatorViewController.m */,
@@ -368,6 +387,8 @@
 				03B109A71340B16000987B77 /* SelectMemeViewController.xib in Resources */,
 				030E94641341B9AD0007A133 /* FBDialog.bundle in Resources */,
 				030E94791341BCCD0007A133 /* FacebookSubmitController.xib in Resources */,
+				030E94821341D07B0007A133 /* MemeTemplateViewController.xib in Resources */,
+				030E94841341D2D10007A133 /* templates in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +423,7 @@
 				030E946D1341B9AD0007A133 /* SBJsonWriter.m in Sources */,
 				030E94781341BCCD0007A133 /* FacebookSubmitController.mm in Sources */,
 				030E947C1341BECC0007A133 /* NotificationSystem.mm in Sources */,
+				030E94811341D07B0007A133 /* MemeTemplateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
