@@ -77,6 +77,7 @@
 	
 	
 	[sheet showFromBarButtonItem: sender animated: YES];
+	[sheet release];
 	
 }
 

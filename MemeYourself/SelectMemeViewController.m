@@ -7,6 +7,7 @@
 //
 
 #import "SelectMemeViewController.h"
+#import "UIImageResizing.h"
 enum JPImagePickerControllerThumbnailSize {
 	kJPImagePickerControllerThumbnailSizeWidth = 75,
 	kJPImagePickerControllerThumbnailSizeHeight = 75
@@ -53,9 +54,11 @@ enum JPImagePickerControllerPreviewImageSize {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	for (int i = 0; i < [[scrollView subviews] count]; i++ ) {
-		[[[scrollView subviews] objectAtIndex:i] removeFromSuperview];
+	for (UIButton *b in [scrollView subviews])
+	{
+		[b removeFromSuperview];
 	}
+	
 	UIButton *button;
 	UIImage *thumbnail;
 	int images_count = 0;
@@ -70,20 +73,36 @@ enum JPImagePickerControllerPreviewImageSize {
 	int i = 0;
 	for (NSString *fn in e)
 	{
-		NSLog(@"%@",fn);
-		images_count ++;
-		
-		[a insertObject: fn atIndex: 0];
+		//add only non thumbnail files
+		if ([fn rangeOfString: @"thumb_"].location == NSNotFound)
+			[a insertObject: fn atIndex: 0];
 	}
 	
 	for (NSString *fn in a)
-	{	
+	{
+		BOOL createThumb = NO;
+		thumbnail = nil;
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 		
-		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn]];
-		thumbnail = [thumbnail scaleAndCropToSize: 
-					 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
-									 onlyIfNeeded:NO];
+		NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
+		thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn_t]];
+		
+		if (!thumbnail)
+		{
+			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn]];	
+			createThumb = YES;
+			thumbnail = [thumbnail scaleAndCropToSize: 
+						 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
+										 onlyIfNeeded:NO];
+			NSData *d = UIImagePNGRepresentation(thumbnail);
+			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
+			[d writeToFile: [MXUtil pathForImage: fn_t] atomically: YES];
+			NSLog(@"no thumb. will create one: %@", fn_t);
+			
+		}
+		
+		if (!thumbnail)
+			abort();
 		
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
 		[button setImage:thumbnail forState:UIControlStateNormal];
@@ -100,6 +119,8 @@ enum JPImagePickerControllerPreviewImageSize {
 		
 		
 		i++;
+		images_count ++;
+		
 	}
 	
 	int rows = images_count / THUMBNAIL_COLS;
@@ -111,6 +132,8 @@ enum JPImagePickerControllerPreviewImageSize {
 	
 	scrollView.contentSize = CGSizeMake(self.view.frame.size.width, height);
 	scrollView.clipsToBounds = YES;
+	[scrollView setNeedsDisplay];
+	[scrollView setNeedsLayout];
 }
 
 - (void)viewDidUnload

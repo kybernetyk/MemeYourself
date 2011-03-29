@@ -93,4 +93,34 @@
 }
 */
 
+- (void) initFBShare: (id) datasource
+{
+	if (!facebookController)
+	{
+		facebookController = [[FacebookSubmitController alloc] initWithNibName: @"FacebookSubmitController" bundle: nil];
+		[facebookController setDelegate: self];
+		[facebookController setDataSource: datasource];
+		
+	}
+	
+	//	[facebookController setLevel: g_GameState.level];
+	//	[facebookController setScore: g_GameState.score];
+	
+	//	[self presentModalViewController: fbsc animated: YES];
+	[facebookController shareOverFarmville];
+}
+
+- (void) facebookSubmitControllerDidFinish: (id) controller
+{
+	NSLog(@"facebook controller finished");
+	
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+	return [facebookController handleOpenURL: url];
+	
+	return YES;
+}
+
+
 @end
