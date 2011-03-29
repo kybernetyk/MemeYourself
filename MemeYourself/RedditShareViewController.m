@@ -306,6 +306,7 @@
 
 - (void) disableUI
 {
+	[activityIndicator startAnimating];
 	[titleField setEnabled: NO];
 	[subredditField setEnabled: NO];
 	[cancelButton setEnabled: NO];
@@ -314,6 +315,7 @@
 
 - (void) enableUI
 {
+	[activityIndicator stopAnimating];
 	[titleField setEnabled: YES];
 	[subredditField setEnabled: YES];
 	[cancelButton setEnabled: YES];

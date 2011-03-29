@@ -19,7 +19,9 @@
 	IBOutlet UITextField *subredditField;
 	
 	IBOutlet UIBarButtonItem *cancelButton;
-	IBOutlet UIButton *submitButton;
+	IBOutlet UIBarButtonItem *submitButton;
+	
+	IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 
 @property (readwrite, retain) NSString *imageFilename;
