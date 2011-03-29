@@ -19,4 +19,6 @@
 
 @property (readwrite, assign) id delegate;
 
+- (IBAction) cancel: (id) sender;
+
 @end

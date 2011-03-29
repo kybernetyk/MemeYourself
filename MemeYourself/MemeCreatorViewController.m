@@ -85,10 +85,17 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 	if (buttonIndex == [actionSheet cancelButtonIndex])
-		return;
+	{
+		if (![imageView image])
+			[saveButton setEnabled: NO];
 
+		return;
+	}
+
+	[saveButton setEnabled: YES];
 	if (buttonIndex == 2)
 	{
+		NSLog(@"WASSUP!");
 		SelectMemeViewController *vc = [[SelectMemeViewController alloc] initWithNibName: @"SelectMemeViewController" bundle: nil];
 		[vc setDelegate: self];
 		[self presentModalViewController: vc animated: YES];
@@ -163,6 +170,13 @@
 	[self setCurrentFilename: fn];
 }
 
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	if (![imageView image])
+			[saveButton setEnabled: NO];
+	
+	[self dismissModalViewControllerAnimated: YES];
+}
 
 //forward tap to the appropriate checkbox if the users releases his finger in a label
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -277,6 +291,16 @@
 	}
 
 	[self setCurrentFilename: fn];
+	
+	if (![imageView image])
+		[saveButton setEnabled: NO];
+
+}
+
+- (void) selectMemeViewControllerDidCancel: (SelectMemeViewController *) vc
+{
+	if (![imageView image])
+		[saveButton setEnabled: NO];
 }
 
 -(void)memeTemplateViewController: (MemeTemplateViewController *) vc didReturnImageFilename: (NSString *) fn
@@ -293,8 +317,17 @@
 	[imageView setImage: image];
 	
 	[self setCurrentFilename: fn];
+	
+	if (![imageView image])
+		[saveButton setEnabled: NO];
+
 }
 
+- (void) memeTemplateViewControllerDidCancel: (MemeTemplateViewController *) vc
+{
+	if (![imageView image])
+		[saveButton setEnabled: NO];
+}
 
 
 
@@ -303,6 +336,7 @@
 	[upperLabel setText: @""];
 	[lowerLabel setText: @""];
 	[imageView setImage: nil];
+	[saveButton setEnabled: NO];
 }
 
 - (void) save:(id)sender

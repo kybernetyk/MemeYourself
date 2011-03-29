@@ -14,6 +14,8 @@
     IBOutlet MXOutlineLabel *upperLabel;
 	IBOutlet MXOutlineLabel *lowerLabel;
 	
+	IBOutlet UIBarButtonItem *saveButton;
+	
 	UITextField *field;
 	
 	UIImageView *imageView;

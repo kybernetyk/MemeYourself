@@ -7,8 +7,13 @@
 #define FB_APP_ID @"172923526090814"
 #define FB_API_KEY @"b664116e3a5e3dee616283910b99c065"
 
+#define IMGUR_API_KEY @"b59c0a68987c48f193dfbc66e6b6633f"
+
 #define kFacebookSubmitDidFail @"kFacebookSubmitDidFail"
 #define kFacebookSubmitDidSucceed @"kFacebookSubmitDidSucceed" 
+
+#define kHtlr 0
+#define kImgur 1
 
 
 #define kNewMemeAdded @"kNewMemeAdded"

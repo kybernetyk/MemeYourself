@@ -17,7 +17,7 @@ enum JPImagePickerControllerPreviewImageSize {
 	kJPImagePickerControllerPreviewImageSizeWidth = 320,
 	kJPImagePickerControllerPreviewImageSizeHeight = 420
 };
-#define PADDING_TOP 4
+#define PADDING_TOP 44
 #define PADDING 4
 #define THUMBNAIL_COLS 4
 
@@ -158,6 +158,12 @@ enum JPImagePickerControllerPreviewImageSize {
 	[delegate memeTemplateViewController: self didReturnImageFilename: fn];
 
 
+	[self dismissModalViewControllerAnimated: YES];
+}
+
+- (IBAction) cancel: (id) sender
+{
+	[delegate memeTemplateViewControllerDidCancel: self];
 	[self dismissModalViewControllerAnimated: YES];
 }
 

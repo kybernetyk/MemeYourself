@@ -10,7 +10,9 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 #import "VZHtlrUpload.h"
+#import "VZImgurUpload.h"
 #import "FBConnect.h"
+#import "RedditShareViewController.h"
 
 @implementation MemeDetailViewController
 @synthesize imageName;
@@ -79,7 +81,7 @@
 													   delegate: self 
 											  cancelButtonTitle: @"cancel"
 										 destructiveButtonTitle: nil
-											  otherButtonTitles: @"EMail", @"Facebook", @"Upload", nil];
+											  otherButtonTitles: @"EMail", @"Facebook", @"Upload", @"Reddit", nil];
 	
 	
 	[sheet showFromBarButtonItem: sender animated: YES];
@@ -89,6 +91,27 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+	//delete sheet
+	if ([actionSheet tag] == 23)
+	{
+		if (buttonIndex == [actionSheet cancelButtonIndex])
+			return;
+		
+		NSString *path_img = [MXUtil pathForMeme: [self imageName]];
+		NSString *path_thumb = [MXUtil pathForMeme: [@"thumb_" stringByAppendingString: [self imageName]]];
+		
+		NSError **err;
+		[[NSFileManager defaultManager] removeItemAtPath: path_img error: err];
+		[[NSFileManager defaultManager] removeItemAtPath: path_thumb error: err];
+		
+		[parent setNeedsRefresh: YES];
+		
+		[[self navigationController] popViewControllerAnimated: YES];
+
+		return;
+	}
+	
+	
 	if (buttonIndex == [actionSheet cancelButtonIndex])
 		return;
 	
@@ -110,8 +133,12 @@
 		return;
 	}
 	
+	if (buttonIndex == 3)
+	{
+		[self shareByReddit];
+		return;
+	}
 	NSLog(@"%i", buttonIndex);
-	
 }
 
 
@@ -151,22 +178,51 @@
 
 - (IBAction) trash: (id) sender
 {
-	NSString *path_img = [MXUtil pathForMeme: [self imageName]];
-	NSString *path_thumb = [MXUtil pathForMeme: [@"thumb_" stringByAppendingString: [self imageName]]];
 	
-	NSError **err;
-	[[NSFileManager defaultManager] removeItemAtPath: path_img error: err];
-	[[NSFileManager defaultManager] removeItemAtPath: path_thumb error: err];
+	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle: @"Really delete this meme?"
+													   delegate: self 
+											  cancelButtonTitle: @"cancel"
+										 destructiveButtonTitle: @"Yes delete"
+											  otherButtonTitles: nil];
+	[sheet setTag: 23];
+
+	[sheet showFromBarButtonItem: sender animated: YES];
+	[sheet release];
 	
-	[parent setNeedsRefresh: YES];
+}
+
+
+- (id) activeUploader
+{
+	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 	
-	[[self navigationController] popViewControllerAnimated: YES];
+	int i = [defs integerForKey: @"hoster"];
+	
+	id ret = nil;
+	switch (i) 
+	{
+		case kHtlr:
+			ret = [[VZHtlrUpload alloc] init];
+			break;
+		case kImgur:
+			ret = [[VZImgurUpload alloc] init];
+			break;
+		default:
+			ret = [[VZHtlrUpload alloc] init];
+			break;
+	}
+
+	return ret;
 }
 
 #pragma mark - imghoster upload
 - (void) shareByUpload
 {
-	VZHtlrUpload *uc = [[VZHtlrUpload alloc] init];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
+
+	id uc = [self activeUploader];
+	//VZHtlrUpload *uc = [[VZHtlrUpload alloc] init];
+	//VZImgurUpload *uc = [[VZImgurUpload alloc] init];
 	[uc setDelegate: self];
 	
 	NSString *path = [MXUtil pathForMeme: [self imageName]];
@@ -180,12 +236,22 @@
 	[uc setFilename: [self imageName]];
 	[uc setData: myData];
 	[uc performUpload];
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
 }
 
+#pragma mark - reddit
+- (void) shareByReddit
+{
+	RedditShareViewController *vc = [[RedditShareViewController alloc] initWithNibName:@"RedditShareViewController" bundle: nil];
+	[vc setImageFilename: [self imageName]];
+	[self presentModalViewController: vc animated: YES];
+	[vc release];
+}
+
+
+#pragma mark - facebook
 - (void) shareByFacebook
 {
-	VZHtlrUpload *uc = [[VZHtlrUpload alloc] init];
+	id uc = [self activeUploader];
 	[uc setDelegate: self];
 	
 	NSString *path = [MXUtil pathForMeme: [self imageName]];
