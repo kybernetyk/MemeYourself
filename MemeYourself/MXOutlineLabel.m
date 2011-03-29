@@ -18,7 +18,8 @@
 	UIColor *textColor = self.textColor;
 	
 	CGContextRef c = UIGraphicsGetCurrentContext();
-	CGContextSetLineWidth(c, [[self font] pointSize]/4.0 );
+	self.shadowOffset = CGSizeMake(0, 0);
+	CGContextSetLineWidth(c, [[self font] pointSize]/6.0 );
 	
 	CGContextSetTextDrawingMode(c, kCGTextStroke);
 	self.textColor = [UIColor blackColor];
