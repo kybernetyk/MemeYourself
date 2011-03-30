@@ -335,7 +335,7 @@
 {
 	[upperLabel setText: @""];
 	[lowerLabel setText: @""];
-	[imageView setImage: nil];
+	[imageView setImage: [UIImage imageNamed: @"takeapicture.png"]];
 	[saveButton setEnabled: NO];
 }
 

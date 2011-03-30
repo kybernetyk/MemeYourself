@@ -81,17 +81,16 @@
 	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 	int i = [defs integerForKey: @"hoster"];
 	
-	id ret = nil;
 	switch (i) 
 	{
 		case kHtlr:
 			uploaderName = @"htlr.org";
 			break;
 		case kImgur:
-			ret = @"imgur.com";
+			uploaderName = @"imgur.com";
 			break;
 		default:
-			ret = @"htlr.org";
+			uploaderName = @"htlr.org";
 			break;
 	}
 	
@@ -189,6 +188,7 @@
 	if (result == MFMailComposeResultFailed && error)
 	{
 		// Show error : [error localizedDescription];
+		[self dismissModalViewControllerAnimated:YES];
 	}
 	else
 	{

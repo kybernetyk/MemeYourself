@@ -28,6 +28,10 @@
 		030E94821341D07B0007A133 /* MemeTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E94801341D07B0007A133 /* MemeTemplateViewController.xib */; };
 		030E94841341D2D10007A133 /* templates in Resources */ = {isa = PBXBuildFile; fileRef = 030E94831341D2CF0007A133 /* templates */; };
 		030E94881341F0430007A133 /* VZImgurUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E94871341F0430007A133 /* VZImgurUpload.m */; };
+		033F46D61343340600E8BCE5 /* takeapicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D41343340600E8BCE5 /* takeapicture.png */; };
+		033F46D71343340600E8BCE5 /* takeapicture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D51343340600E8BCE5 /* takeapicture@2x.png */; };
+		0343615D1343206C008D1A69 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0343615B1343206C008D1A69 /* PreferencesViewController.m */; };
+		0343615E1343206C008D1A69 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0343615C1343206C008D1A69 /* PreferencesViewController.xib */; };
 		0395C58513422E7C007C2A22 /* RedditShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395C58313422E7C007C2A22 /* RedditShareViewController.m */; };
 		0395C58613422E7D007C2A22 /* RedditShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395C58413422E7C007C2A22 /* RedditShareViewController.xib */; };
 		0395C5BE13423622007C2A22 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395C58913423622007C2A22 /* ASIAuthenticationDialog.m */; };
@@ -121,6 +125,11 @@
 		030E94831341D2CF0007A133 /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
 		030E94861341F0430007A133 /* VZImgurUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VZImgurUpload.h; sourceTree = "<group>"; };
 		030E94871341F0430007A133 /* VZImgurUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VZImgurUpload.m; sourceTree = "<group>"; };
+		033F46D41343340600E8BCE5 /* takeapicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takeapicture.png; sourceTree = "<group>"; };
+		033F46D51343340600E8BCE5 /* takeapicture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takeapicture@2x.png"; sourceTree = "<group>"; };
+		0343615A1343206C008D1A69 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		0343615B1343206C008D1A69 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
+		0343615C1343206C008D1A69 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
 		0395C58213422E7C007C2A22 /* RedditShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedditShareViewController.h; sourceTree = "<group>"; };
 		0395C58313422E7C007C2A22 /* RedditShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedditShareViewController.m; sourceTree = "<group>"; };
 		0395C58413422E7C007C2A22 /* RedditShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedditShareViewController.xib; sourceTree = "<group>"; };
@@ -320,6 +329,16 @@
 			name = imgur_anon;
 			sourceTree = "<group>";
 		};
+		0343615813432058008D1A69 /* Preferences View */ = {
+			isa = PBXGroup;
+			children = (
+				0343615A1343206C008D1A69 /* PreferencesViewController.h */,
+				0343615B1343206C008D1A69 /* PreferencesViewController.m */,
+				0343615C1343206C008D1A69 /* PreferencesViewController.xib */,
+			);
+			name = "Preferences View";
+			sourceTree = "<group>";
+		};
 		0395C58013422E63007C2A22 /* Reddit Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +457,7 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				0343615813432058008D1A69 /* Preferences View */,
 				0395C58013422E63007C2A22 /* Reddit Share */,
 				030E94831341D2CF0007A133 /* templates */,
 				030E94381341B5170007A133 /* Uploaders */,
@@ -455,6 +475,8 @@
 		03B109561340780900987B77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				033F46D41343340600E8BCE5 /* takeapicture.png */,
+				033F46D51343340600E8BCE5 /* takeapicture@2x.png */,
 				0395C5E01342404D007C2A22 /* NSString+Slice.m */,
 				0395C5DF13424047007C2A22 /* NSString+Slice.h */,
 				0395C58713423622007C2A22 /* ASIHttp */,
@@ -588,6 +610,9 @@
 				030E94821341D07B0007A133 /* MemeTemplateViewController.xib in Resources */,
 				030E94841341D2D10007A133 /* templates in Resources */,
 				0395C58613422E7D007C2A22 /* RedditShareViewController.xib in Resources */,
+				0343615E1343206C008D1A69 /* PreferencesViewController.xib in Resources */,
+				033F46D61343340600E8BCE5 /* takeapicture.png in Resources */,
+				033F46D71343340600E8BCE5 /* takeapicture@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +673,7 @@
 				0395C5D313423622007C2A22 /* ASIS3Request.m in Sources */,
 				0395C5D413423622007C2A22 /* ASIS3ServiceRequest.m in Sources */,
 				0395C5E11342404D007C2A22 /* NSString+Slice.m in Sources */,
+				0343615D1343206C008D1A69 /* PreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

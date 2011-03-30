@@ -81,9 +81,6 @@
 	NSString *username = [defs objectForKey: @"reddit_username"];
 	NSString *password = [defs objectForKey: @"reddit_password"];
 
-	username = @"fluxfnorge";
-	password = @"warbird";
-	
 	if (!username || !password)
 	{
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
@@ -160,9 +157,6 @@
 	NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 	NSString *username = [defs objectForKey: @"reddit_username"];
 	NSString *password = [defs objectForKey: @"reddit_password"];
-	
-	username = @"fluxforge";
-	password = @"warbird";
 	
 	ASIFormDataRequest *req = [ASIFormDataRequest requestWithURL: [NSURL URLWithString: @"http://www.reddit.com/api/login"]];
 	[req setPostFormat: ASIURLEncodedPostFormat];
@@ -258,7 +252,7 @@
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 		[self enableUI];
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
-													 message: @"No redirect URL found!"
+													 message: @"No redirect URL found! Maybe reddit is under high load again?"
 													delegate: nil
 										   cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		[av show];

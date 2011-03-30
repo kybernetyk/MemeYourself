@@ -159,11 +159,11 @@
  *-----------------------------------------------------------------------------
  */
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data                // IN
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data_                // IN
 {
 	//LOG(10, ("%s: self:0x%p\n", __func__, self));
 	
-	NSString *reply = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	NSString *reply_ = [[NSString alloc] initWithData:data_ encoding:NSUTF8StringEncoding];
 	//	LOG(10, ("%s: data: %s\n", __func__, [reply UTF8String]));
 	
 	/*if ([reply hasPrefix:@"YES"]) 
@@ -173,9 +173,9 @@
 	
 //	NSLog(@"received data: %@",reply);
 	
-	[self processReturnValue: reply];
+	[self processReturnValue: reply_];
 	
-	[reply release];
+	[reply_ release];
 	
 	//NSArray *rets = [reply componentsSeparatedByString:@","];
 	

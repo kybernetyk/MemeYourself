@@ -33,5 +33,6 @@
 - (void) shareByMail;
 - (void) shareByUpload;
 - (void) shareByFacebook;
+- (void) shareByFacebook2;
 - (void) shareByReddit;
 @end
