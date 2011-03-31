@@ -40,7 +40,7 @@
 	}
 
 	
-	SBJsonParser *parser = [[SBJsonParser alloc] init];
+	SBJsonParser *parser = [[[SBJsonParser alloc] init] autorelease];
 	id obj = [[parser objectWithString: returnValue] valueForKey: @"upload"];
 	NSLog(@"obj: %@", obj);
 	

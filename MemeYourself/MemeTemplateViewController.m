@@ -37,6 +37,8 @@ enum JPImagePickerControllerPreviewImageSize {
 
 - (void)dealloc
 {
+	[filenames release], filenames = nil;
+
     [super dealloc];
 }
 
@@ -81,7 +83,6 @@ enum JPImagePickerControllerPreviewImageSize {
 	
 	for (NSString *fn in a)
 	{
-		BOOL createThumb = NO;
 		thumbnail = nil;
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 		
@@ -91,11 +92,10 @@ enum JPImagePickerControllerPreviewImageSize {
 		if (!thumbnail)
 		{
 			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForTemplate: fn]];	
-			createThumb = YES;
 			thumbnail = [thumbnail scaleAndCropToSize: 
 						 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
 										 onlyIfNeeded:NO];
-			NSData *d = UIImagePNGRepresentation(thumbnail);
+//			NSData *d = UIImagePNGRepresentation(thumbnail);
 			NSString *fn_t = [@"thumb_" stringByAppendingString: fn];	
 		//	[d writeToFile: [MXUtil pathForImage: fn_t] atomically: YES];
 			NSLog(@"no thumb. will create one: %@", fn_t);

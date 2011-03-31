@@ -40,6 +40,7 @@ enum JPImagePickerControllerPreviewImageSize {
 {
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 	[center removeObserver: self];
+	[filenames release], filenames = nil;
 
     [super dealloc];
 }
@@ -75,7 +76,7 @@ enum JPImagePickerControllerPreviewImageSize {
 	UIImage *thumbnail;
 	int images_count = 0;
 	
-	[filenames release];
+	[filenames release], filenames = nil;
 	filenames = [[NSMutableDictionary alloc] init];
 	
 	NSDirectoryEnumerator *e = [[NSFileManager defaultManager] enumeratorAtPath: [MXUtil memeDir]];
@@ -92,7 +93,6 @@ enum JPImagePickerControllerPreviewImageSize {
 	
 	for (NSString *fn in a)
 	{
-		BOOL createThumb = NO;
 		thumbnail = nil;
 		[filenames setObject: fn forKey: [NSNumber numberWithInt: i]];
 
@@ -102,7 +102,6 @@ enum JPImagePickerControllerPreviewImageSize {
 		if (!thumbnail)
 		{
 			thumbnail = [UIImage imageWithContentsOfFile: [MXUtil pathForMeme: fn]];	
-			createThumb = YES;
 			thumbnail = [thumbnail scaleAndCropToSize: 
 						 CGSizeMake(kJPImagePickerControllerThumbnailSizeWidth, kJPImagePickerControllerThumbnailSizeHeight)
 										 onlyIfNeeded:NO];

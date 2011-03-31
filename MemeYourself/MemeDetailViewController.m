@@ -119,7 +119,7 @@
 		NSString *path_img = [MXUtil pathForMeme: [self imageName]];
 		NSString *path_thumb = [MXUtil pathForMeme: [@"thumb_" stringByAppendingString: [self imageName]]];
 		
-		NSError **err;
+		NSError **err = nil;
 		[[NSFileManager defaultManager] removeItemAtPath: path_img error: err];
 		[[NSFileManager defaultManager] removeItemAtPath: path_thumb error: err];
 		
@@ -231,7 +231,7 @@
 			break;
 	}
 
-	return ret;
+	return [ret autorelease];
 }
 
 #pragma mark - imghoster upload
@@ -239,7 +239,7 @@
 {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: YES];
 
-	id uc = [self activeUploader];
+	id uc = [[self activeUploader] retain];
 	//VZHtlrUpload *uc = [[VZHtlrUpload alloc] init];
 	//VZImgurUpload *uc = [[VZImgurUpload alloc] init];
 	[uc setDelegate: self];
@@ -270,7 +270,7 @@
 #pragma mark - facebook
 - (void) shareByFacebook
 {
-	id uc = [self activeUploader];
+	id uc = [[self activeUploader] retain];
 	[uc setDelegate: self];
 	
 	NSString *path = [MXUtil pathForMeme: [self imageName]];

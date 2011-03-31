@@ -21,7 +21,11 @@
 	
 //	- (BOOL)createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error
 
-	NSError **err;
+	[[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:
+															  [NSNumber numberWithInt: kImgur], @"hoster",
+															  nil]];
+	
+	NSError **err = nil;
 	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil memeDir] withIntermediateDirectories: YES attributes:nil error:err];
 	[[NSFileManager defaultManager] createDirectoryAtPath: [MXUtil imageDir] withIntermediateDirectories: YES attributes:nil error:err];
 	

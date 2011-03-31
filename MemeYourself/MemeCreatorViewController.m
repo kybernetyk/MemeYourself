@@ -227,7 +227,7 @@
 	NSLog(@"tag: %i", alertView.tag);
 	
 	NSLog(@"%@", field.text);
-	MXOutlineLabel *l;
+	MXOutlineLabel *l = nil;
 	
 	if (alertView.tag == 1)
 	{
