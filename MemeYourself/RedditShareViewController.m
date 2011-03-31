@@ -172,7 +172,7 @@
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 		[self enableUI];
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
-													 message: [NSString stringWithFormat: @"Submission failed with error: %@", resp]
+													 message: @"Login failed. Check your username/password. (If it's right maybe reddit's servers are down again?)"
 													delegate: nil
 										   cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		[av show];
@@ -192,7 +192,7 @@
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 		[self enableUI];
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
-													 message: @"Something went wrong. No uh key found!"
+													 message: @"Login seemed to work, but there was no uh key found. Is reddit down?"
 													delegate: nil
 										   cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		[av show];
@@ -209,7 +209,7 @@
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 		[self enableUI];
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
-													 message: @"Couldn't extract UH!"
+													 message: @"Couldn't extract uh! Reddit down?"
 													delegate: nil
 										   cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		[av show];
@@ -238,7 +238,7 @@
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible: NO];
 		[self enableUI];
 		UIAlertView *av = [[UIAlertView alloc] initWithTitle: @"Error"
-													 message: [NSString stringWithFormat: @"Submission failed with error: %@", resp]
+													 message: @"No reaction on our submission. Maybe reddit is down/slow?"
 													delegate: nil
 										   cancelButtonTitle: @"OK" otherButtonTitles: nil];
 		[av show];

@@ -30,6 +30,24 @@
 		030E94881341F0430007A133 /* VZImgurUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E94871341F0430007A133 /* VZImgurUpload.m */; };
 		033F46D61343340600E8BCE5 /* takeapicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D41343340600E8BCE5 /* takeapicture.png */; };
 		033F46D71343340600E8BCE5 /* takeapicture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D51343340600E8BCE5 /* takeapicture@2x.png */; };
+		033F46DB134337FC00E8BCE5 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D9134337FC00E8BCE5 /* 20-gear2.png */; };
+		033F46DC134337FC00E8BCE5 /* 20-gear2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46DA134337FC00E8BCE5 /* 20-gear2@2x.png */; };
+		033F46DF1343382B00E8BCE5 /* 39-spraycan.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46DD1343382B00E8BCE5 /* 39-spraycan.png */; };
+		033F46E01343382B00E8BCE5 /* 39-spraycan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46DE1343382B00E8BCE5 /* 39-spraycan@2x.png */; };
+		033F46E3134338C700E8BCE5 /* 12-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46E1134338C700E8BCE5 /* 12-eye.png */; };
+		033F46E4134338C700E8BCE5 /* 12-eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46E2134338C700E8BCE5 /* 12-eye@2x.png */; };
+		033F46E7134338E800E8BCE5 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46E5134338E800E8BCE5 /* 18-envelope.png */; };
+		033F46E8134338E800E8BCE5 /* 18-envelope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46E6134338E800E8BCE5 /* 18-envelope@2x.png */; };
+		033F46ED1343452A00E8BCE5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F46EB1343452A00E8BCE5 /* HelpViewController.m */; };
+		033F46EE1343452A00E8BCE5 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033F46EC1343452A00E8BCE5 /* HelpViewController.xib */; };
+		033F46F11343475C00E8BCE5 /* capslock.html in Resources */ = {isa = PBXBuildFile; fileRef = 033F46F01343475C00E8BCE5 /* capslock.html */; };
+		033F46F6134347D600E8BCE5 /* HelpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 033F46F4134347D600E8BCE5 /* HelpDetailViewController.m */; };
+		033F46F7134347D600E8BCE5 /* HelpDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033F46F5134347D600E8BCE5 /* HelpDetailViewController.xib */; };
+		033F4703134349F400E8BCE5 /* capslock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 033F4702134349F400E8BCE5 /* capslock.jpg */; };
+		033F470513434A9E00E8BCE5 /* custom_templates.html in Resources */ = {isa = PBXBuildFile; fileRef = 033F470413434A9E00E8BCE5 /* custom_templates.html */; };
+		033F470713434C7700E8BCE5 /* general_help.html in Resources */ = {isa = PBXBuildFile; fileRef = 033F470613434C7600E8BCE5 /* general_help.html */; };
+		033F470A13434DC600E8BCE5 /* 79-medical-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F470813434DC600E8BCE5 /* 79-medical-bag.png */; };
+		033F470B13434DC600E8BCE5 /* 79-medical-bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F470913434DC600E8BCE5 /* 79-medical-bag@2x.png */; };
 		0343615D1343206C008D1A69 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0343615B1343206C008D1A69 /* PreferencesViewController.m */; };
 		0343615E1343206C008D1A69 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0343615C1343206C008D1A69 /* PreferencesViewController.xib */; };
 		0395C58513422E7C007C2A22 /* RedditShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395C58313422E7C007C2A22 /* RedditShareViewController.m */; };
@@ -62,6 +80,8 @@
 		0395C5DC13423748007C2A22 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395C5DB13423748007C2A22 /* MobileCoreServices.framework */; };
 		0395C5DE13423754007C2A22 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395C5DD13423754007C2A22 /* libz.dylib */; };
 		0395C5E11342404D007C2A22 /* NSString+Slice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395C5E01342404D007C2A22 /* NSString+Slice.m */; };
+		039F2B4913449ECC006A980D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F2B4813449ECC006A980D /* Icon.png */; };
+		039F2B4C13449ED2006A980D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F2B4B13449ED2006A980D /* Icon@2x.png */; };
 		03B109501340780900987B77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1094F1340780900987B77 /* UIKit.framework */; };
 		03B109521340780900987B77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109511340780900987B77 /* Foundation.framework */; };
 		03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109531340780900987B77 /* CoreGraphics.framework */; };
@@ -127,6 +147,26 @@
 		030E94871341F0430007A133 /* VZImgurUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VZImgurUpload.m; sourceTree = "<group>"; };
 		033F46D41343340600E8BCE5 /* takeapicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takeapicture.png; sourceTree = "<group>"; };
 		033F46D51343340600E8BCE5 /* takeapicture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takeapicture@2x.png"; sourceTree = "<group>"; };
+		033F46D9134337FC00E8BCE5 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		033F46DA134337FC00E8BCE5 /* 20-gear2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2@2x.png"; sourceTree = "<group>"; };
+		033F46DD1343382B00E8BCE5 /* 39-spraycan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "39-spraycan.png"; sourceTree = "<group>"; };
+		033F46DE1343382B00E8BCE5 /* 39-spraycan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "39-spraycan@2x.png"; sourceTree = "<group>"; };
+		033F46E1134338C700E8BCE5 /* 12-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye.png"; sourceTree = "<group>"; };
+		033F46E2134338C700E8BCE5 /* 12-eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-eye@2x.png"; sourceTree = "<group>"; };
+		033F46E5134338E800E8BCE5 /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
+		033F46E6134338E800E8BCE5 /* 18-envelope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope@2x.png"; sourceTree = "<group>"; };
+		033F46EA1343452A00E8BCE5 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		033F46EB1343452A00E8BCE5 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		033F46EC1343452A00E8BCE5 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		033F46F01343475C00E8BCE5 /* capslock.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = capslock.html; sourceTree = "<group>"; };
+		033F46F3134347D600E8BCE5 /* HelpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpDetailViewController.h; sourceTree = "<group>"; };
+		033F46F4134347D600E8BCE5 /* HelpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpDetailViewController.m; sourceTree = "<group>"; };
+		033F46F5134347D600E8BCE5 /* HelpDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpDetailViewController.xib; sourceTree = "<group>"; };
+		033F4702134349F400E8BCE5 /* capslock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = capslock.jpg; sourceTree = "<group>"; };
+		033F470413434A9E00E8BCE5 /* custom_templates.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = custom_templates.html; sourceTree = "<group>"; };
+		033F470613434C7600E8BCE5 /* general_help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = general_help.html; sourceTree = "<group>"; };
+		033F470813434DC600E8BCE5 /* 79-medical-bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "79-medical-bag.png"; sourceTree = "<group>"; };
+		033F470913434DC600E8BCE5 /* 79-medical-bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "79-medical-bag@2x.png"; sourceTree = "<group>"; };
 		0343615A1343206C008D1A69 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		0343615B1343206C008D1A69 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
 		0343615C1343206C008D1A69 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
@@ -189,6 +229,8 @@
 		0395C5DD13423754007C2A22 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0395C5DF13424047007C2A22 /* NSString+Slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Slice.h"; sourceTree = "<group>"; };
 		0395C5E01342404D007C2A22 /* NSString+Slice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Slice.m"; sourceTree = "<group>"; };
+		039F2B4813449ECC006A980D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		039F2B4B13449ED2006A980D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		03B1094B1340780900987B77 /* MemeYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B1094F1340780900987B77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03B109511340780900987B77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -329,6 +371,39 @@
 			name = imgur_anon;
 			sourceTree = "<group>";
 		};
+		033F46E91343451300E8BCE5 /* help view controller */ = {
+			isa = PBXGroup;
+			children = (
+				033F46F2134347BB00E8BCE5 /* help detail view controller */,
+				033F46EF1343474D00E8BCE5 /* help files */,
+				033F46EA1343452A00E8BCE5 /* HelpViewController.h */,
+				033F46EB1343452A00E8BCE5 /* HelpViewController.m */,
+				033F46EC1343452A00E8BCE5 /* HelpViewController.xib */,
+			);
+			name = "help view controller";
+			sourceTree = "<group>";
+		};
+		033F46EF1343474D00E8BCE5 /* help files */ = {
+			isa = PBXGroup;
+			children = (
+				033F4702134349F400E8BCE5 /* capslock.jpg */,
+				033F46F01343475C00E8BCE5 /* capslock.html */,
+				033F470413434A9E00E8BCE5 /* custom_templates.html */,
+				033F470613434C7600E8BCE5 /* general_help.html */,
+			);
+			name = "help files";
+			sourceTree = "<group>";
+		};
+		033F46F2134347BB00E8BCE5 /* help detail view controller */ = {
+			isa = PBXGroup;
+			children = (
+				033F46F3134347D600E8BCE5 /* HelpDetailViewController.h */,
+				033F46F4134347D600E8BCE5 /* HelpDetailViewController.m */,
+				033F46F5134347D600E8BCE5 /* HelpDetailViewController.xib */,
+			);
+			name = "help detail view controller";
+			sourceTree = "<group>";
+		};
 		0343615813432058008D1A69 /* Preferences View */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +499,8 @@
 		03B109401340780900987B77 = {
 			isa = PBXGroup;
 			children = (
+				039F2B4B13449ED2006A980D /* Icon@2x.png */,
+				039F2B4813449ECC006A980D /* Icon.png */,
 				0395C5DD13423754007C2A22 /* libz.dylib */,
 				0395C5DB13423748007C2A22 /* MobileCoreServices.framework */,
 				0395C5D913423743007C2A22 /* CFNetwork.framework */,
@@ -457,6 +534,7 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				033F46E91343451300E8BCE5 /* help view controller */,
 				0343615813432058008D1A69 /* Preferences View */,
 				0395C58013422E63007C2A22 /* Reddit Share */,
 				030E94831341D2CF0007A133 /* templates */,
@@ -475,6 +553,16 @@
 		03B109561340780900987B77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				033F470813434DC600E8BCE5 /* 79-medical-bag.png */,
+				033F470913434DC600E8BCE5 /* 79-medical-bag@2x.png */,
+				033F46E5134338E800E8BCE5 /* 18-envelope.png */,
+				033F46E6134338E800E8BCE5 /* 18-envelope@2x.png */,
+				033F46E1134338C700E8BCE5 /* 12-eye.png */,
+				033F46E2134338C700E8BCE5 /* 12-eye@2x.png */,
+				033F46DD1343382B00E8BCE5 /* 39-spraycan.png */,
+				033F46DE1343382B00E8BCE5 /* 39-spraycan@2x.png */,
+				033F46D9134337FC00E8BCE5 /* 20-gear2.png */,
+				033F46DA134337FC00E8BCE5 /* 20-gear2@2x.png */,
 				033F46D41343340600E8BCE5 /* takeapicture.png */,
 				033F46D51343340600E8BCE5 /* takeapicture@2x.png */,
 				0395C5E01342404D007C2A22 /* NSString+Slice.m */,
@@ -613,6 +701,24 @@
 				0343615E1343206C008D1A69 /* PreferencesViewController.xib in Resources */,
 				033F46D61343340600E8BCE5 /* takeapicture.png in Resources */,
 				033F46D71343340600E8BCE5 /* takeapicture@2x.png in Resources */,
+				033F46DB134337FC00E8BCE5 /* 20-gear2.png in Resources */,
+				033F46DC134337FC00E8BCE5 /* 20-gear2@2x.png in Resources */,
+				033F46DF1343382B00E8BCE5 /* 39-spraycan.png in Resources */,
+				033F46E01343382B00E8BCE5 /* 39-spraycan@2x.png in Resources */,
+				033F46E3134338C700E8BCE5 /* 12-eye.png in Resources */,
+				033F46E4134338C700E8BCE5 /* 12-eye@2x.png in Resources */,
+				033F46E7134338E800E8BCE5 /* 18-envelope.png in Resources */,
+				033F46E8134338E800E8BCE5 /* 18-envelope@2x.png in Resources */,
+				033F46EE1343452A00E8BCE5 /* HelpViewController.xib in Resources */,
+				033F46F11343475C00E8BCE5 /* capslock.html in Resources */,
+				033F46F7134347D600E8BCE5 /* HelpDetailViewController.xib in Resources */,
+				033F4703134349F400E8BCE5 /* capslock.jpg in Resources */,
+				033F470513434A9E00E8BCE5 /* custom_templates.html in Resources */,
+				033F470713434C7700E8BCE5 /* general_help.html in Resources */,
+				033F470A13434DC600E8BCE5 /* 79-medical-bag.png in Resources */,
+				033F470B13434DC600E8BCE5 /* 79-medical-bag@2x.png in Resources */,
+				039F2B4913449ECC006A980D /* Icon.png in Resources */,
+				039F2B4C13449ED2006A980D /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +780,8 @@
 				0395C5D413423622007C2A22 /* ASIS3ServiceRequest.m in Sources */,
 				0395C5E11342404D007C2A22 /* NSString+Slice.m in Sources */,
 				0343615D1343206C008D1A69 /* PreferencesViewController.m in Sources */,
+				033F46ED1343452A00E8BCE5 /* HelpViewController.m in Sources */,
+				033F46F6134347D600E8BCE5 /* HelpDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

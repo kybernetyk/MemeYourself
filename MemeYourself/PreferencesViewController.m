@@ -277,7 +277,7 @@
 	
 	
 	// Fill out the email body text
-	NSString *emailBody = @"Hey Minyx,\n\n";
+	NSString *emailBody = @"Hey lazy developer!\n\n";
 	[picker setMessageBody:emailBody isHTML:NO];
 	[picker setSubject: subject];
 	

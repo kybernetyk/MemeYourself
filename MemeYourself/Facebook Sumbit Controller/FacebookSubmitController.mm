@@ -235,13 +235,13 @@
 	[facebook retain];
 	//	[facebook requestWithMethodName: @"stream.publish" andParams: params andHttpMethod: @"POST" andDelegate: self];
 
-//	[facebook requestWithGraphPath: @"me/feed"
-//						 andParams: params 
-//					 andHttpMethod: @"POST" 
-//					   andDelegate: self];
+	[facebook requestWithGraphPath: @"me/feed"
+						 andParams: params 
+					 andHttpMethod: @"POST" 
+					   andDelegate: self];
 
 	
-	[facebook dialog: @"feed" andParams: params andDelegate: self];
+//	[facebook dialog: @"feed" andParams: params andDelegate: self];
 	
 	
 //	[_facebook dialog:@"feed"

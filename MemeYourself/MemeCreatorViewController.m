@@ -70,7 +70,7 @@
 
 - (void) takePicture: (id) sender
 {
-	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle: @"LOLZ" 
+	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle: @"Gieve Pics Plx!" 
 													   delegate: self 
 											  cancelButtonTitle: @"cancel"
 										 destructiveButtonTitle: nil
@@ -146,9 +146,9 @@
 	
 	[self dismissModalViewControllerAnimated: YES];
 	
-	if (image.size.width < 640 || image.size.height < 640)
+	if (image.size.width != 512 || image.size.height != 512)
 	{
-		CGSize sz = CGSizeMake(640, 640);
+		CGSize sz = CGSizeMake(512, 512);
 		image = [self imageWithImage: image covertToSize: sz];
 	}
 	
@@ -284,11 +284,11 @@
 	UIImage *image = [UIImage imageWithContentsOfFile: [MXUtil pathForImage: fn]];
 	[imageView setImage: image];
 	
-	if (image.size.width < 640 || image.size.height < 640)
-	{
-		CGSize sz = CGSizeMake(640, 640);
-		image = [self imageWithImage: image covertToSize: sz];
-	}
+//	if (image.size.width != 512 || image.size.height != 512)
+//	{
+//		CGSize sz = CGSizeMake(512, 512);
+//		image = [self imageWithImage: image covertToSize: sz];
+//	}
 
 	[self setCurrentFilename: fn];
 	
@@ -307,11 +307,11 @@
 {
 	UIImage *image = [UIImage imageWithContentsOfFile: [MXUtil pathForTemplate: fn]];
 	
-	if (image.size.width < 640 || image.size.height < 640)
-	{
-		CGSize sz = CGSizeMake(640, 640);
-		image = [self imageWithImage: image covertToSize: sz];
-	}
+//	if (image.size.width != 512 || image.size.height != 512)
+//	{
+//		CGSize sz = CGSizeMake(512, 512);
+//		image = [self imageWithImage: image covertToSize: sz];
+//	}
 
 	NSLog(@"template: %@", [MXUtil pathForTemplate: fn]);
 	[imageView setImage: image];
