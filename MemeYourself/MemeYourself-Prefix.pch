@@ -3,7 +3,7 @@
 //
 
 #import <Availability.h>
-//#define NSLog(...) //
+
 #define ADMOB_PUBLISHER_ID @"a14d9ac1041bdcd"
 
 #define FB_APP_ID @"172923526090814"
@@ -28,4 +28,5 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
+	#define NSLog(...)
 #endif
