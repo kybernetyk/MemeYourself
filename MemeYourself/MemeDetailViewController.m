@@ -166,7 +166,7 @@
 	MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 	picker.mailComposeDelegate = self;
 	
-	[picker setSubject:@"Hello"];
+	[picker setSubject:@"Omg! Can it be meme tiem?"];
 	
 	
 	// Attach an image to the email

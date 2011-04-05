@@ -1,0 +1,9 @@
+build/*
+GinkoLevelEditor/build/*
+.DS_Store
+*/project.xcworkspace/
+*/xcuserdata/
+profile
+*.mode1v3
+*.pbxuser
+*.perspectivev3
