@@ -179,17 +179,15 @@ extern BOOL g_is_online;
 
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
 {
-/*	if (![[GameInfo sharedInstance] isPaused])
-	{
-		[[GameInfo sharedInstance] setIsPaused: ![[GameInfo sharedInstance] isPaused]];
-		NSLog(@"paused: %i",[[GameInfo sharedInstance] isPaused]);
-		[[CCDirector sharedDirector] pushScene: [PauseScene node]];
-		
-	}
-*/	
-	
-	NSLog(@"bannerViewActionShouldBegin:");
+	backuppos = [[self view] frame];
+	NSLog(@"bannerViewActionShouldBegin: %@", [self view]);
 	return YES;	
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+	NSLog(@"bannerViewActionDidFinish: %@", banner);
+	[[self view] setFrame: backuppos];
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
