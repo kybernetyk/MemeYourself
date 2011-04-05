@@ -102,6 +102,19 @@
 		03B109A71340B16000987B77 /* SelectMemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B109A51340B16000987B77 /* SelectMemeViewController.xib */; };
 		03B109AA1340B26B00987B77 /* MXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B109A91340B26B00987B77 /* MXUtil.m */; };
 		03B109AC1340D01000987B77 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B109AB1340D00F00987B77 /* MessageUI.framework */; };
+		03FC1831134AF451005CF3D8 /* libAdMob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC1819134AF451005CF3D8 /* libAdMob.a */; };
+		03FC1832134AF451005CF3D8 /* MXAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC181B134AF451005CF3D8 /* MXAdController.m */; };
+		03FC1833134AF451005CF3D8 /* MXAdController_landscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FC181C134AF451005CF3D8 /* MXAdController_landscape.xib */; };
+		03FC1834134AF451005CF3D8 /* MXAdController_portrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FC181D134AF451005CF3D8 /* MXAdController_portrait.xib */; };
+		03FC1835134AF451005CF3D8 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1820134AF451005CF3D8 /* CDataScanner.m */; };
+		03FC1836134AF451005CF3D8 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1823134AF451005CF3D8 /* CDataScanner_Extensions.m */; };
+		03FC1837134AF451005CF3D8 /* NSCharacterSet_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1825134AF451005CF3D8 /* NSCharacterSet_Extensions.m */; };
+		03FC1838134AF451005CF3D8 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1827134AF451005CF3D8 /* NSDictionary_JSONExtensions.m */; };
+		03FC1839134AF451005CF3D8 /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1829134AF451005CF3D8 /* NSScanner_Extensions.m */; };
+		03FC183A134AF451005CF3D8 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC182C134AF451005CF3D8 /* CJSONDeserializer.m */; };
+		03FC183B134AF451005CF3D8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC182E134AF451005CF3D8 /* CJSONScanner.m */; };
+		03FC183C134AF451005CF3D8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1830134AF451005CF3D8 /* CJSONSerializer.m */; };
+		03FC183E134AF47D005CF3D8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC183D134AF47D005CF3D8 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +275,32 @@
 		03B109A81340B26B00987B77 /* MXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUtil.h; sourceTree = "<group>"; };
 		03B109A91340B26B00987B77 /* MXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUtil.m; sourceTree = "<group>"; };
 		03B109AB1340D00F00987B77 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		03FC1815134AF451005CF3D8 /* AdMobDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegateProtocol.h; sourceTree = "<group>"; };
+		03FC1816134AF451005CF3D8 /* AdMobInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialAd.h; sourceTree = "<group>"; };
+		03FC1817134AF451005CF3D8 /* AdMobInterstitialDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobInterstitialDelegateProtocol.h; sourceTree = "<group>"; };
+		03FC1818134AF451005CF3D8 /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
+		03FC1819134AF451005CF3D8 /* libAdMob.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMob.a; sourceTree = "<group>"; };
+		03FC181A134AF451005CF3D8 /* MXAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXAdController.h; sourceTree = "<group>"; };
+		03FC181B134AF451005CF3D8 /* MXAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXAdController.m; sourceTree = "<group>"; };
+		03FC181C134AF451005CF3D8 /* MXAdController_landscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXAdController_landscape.xib; sourceTree = "<group>"; };
+		03FC181D134AF451005CF3D8 /* MXAdController_portrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MXAdController_portrait.xib; sourceTree = "<group>"; };
+		03FC181F134AF451005CF3D8 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		03FC1820134AF451005CF3D8 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		03FC1822134AF451005CF3D8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		03FC1823134AF451005CF3D8 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		03FC1824134AF451005CF3D8 /* NSCharacterSet_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet_Extensions.h; sourceTree = "<group>"; };
+		03FC1825134AF451005CF3D8 /* NSCharacterSet_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_Extensions.m; sourceTree = "<group>"; };
+		03FC1826134AF451005CF3D8 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		03FC1827134AF451005CF3D8 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		03FC1828134AF451005CF3D8 /* NSScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScanner_Extensions.h; sourceTree = "<group>"; };
+		03FC1829134AF451005CF3D8 /* NSScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScanner_Extensions.m; sourceTree = "<group>"; };
+		03FC182B134AF451005CF3D8 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		03FC182C134AF451005CF3D8 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		03FC182D134AF451005CF3D8 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		03FC182E134AF451005CF3D8 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		03FC182F134AF451005CF3D8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		03FC1830134AF451005CF3D8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		03FC183D134AF47D005CF3D8 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FC183E134AF47D005CF3D8 /* iAd.framework in Frameworks */,
 				0395C5DE13423754007C2A22 /* libz.dylib in Frameworks */,
 				0395C5DC13423748007C2A22 /* MobileCoreServices.framework in Frameworks */,
 				0395C5DA13423743007C2A22 /* CFNetwork.framework in Frameworks */,
@@ -278,6 +318,7 @@
 				03B109501340780900987B77 /* UIKit.framework in Frameworks */,
 				03B109521340780900987B77 /* Foundation.framework in Frameworks */,
 				03B109541340780900987B77 /* CoreGraphics.framework in Frameworks */,
+				03FC1831134AF451005CF3D8 /* libAdMob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +540,7 @@
 		03B109401340780900987B77 = {
 			isa = PBXGroup;
 			children = (
+				03FC183D134AF47D005CF3D8 /* iAd.framework */,
 				039F2B4B13449ED2006A980D /* Icon@2x.png */,
 				039F2B4813449ECC006A980D /* Icon.png */,
 				0395C5DD13423754007C2A22 /* libz.dylib */,
@@ -553,6 +595,7 @@
 		03B109561340780900987B77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03FC1813134AF451005CF3D8 /* MXAdController */,
 				033F470813434DC600E8BCE5 /* 79-medical-bag.png */,
 				033F470913434DC600E8BCE5 /* 79-medical-bag@2x.png */,
 				033F46E5134338E800E8BCE5 /* 18-envelope.png */,
@@ -639,6 +682,70 @@
 			name = "Select Meme View";
 			sourceTree = "<group>";
 		};
+		03FC1813134AF451005CF3D8 /* MXAdController */ = {
+			isa = PBXGroup;
+			children = (
+				03FC1814134AF451005CF3D8 /* AdMob */,
+				03FC181A134AF451005CF3D8 /* MXAdController.h */,
+				03FC181B134AF451005CF3D8 /* MXAdController.m */,
+				03FC181C134AF451005CF3D8 /* MXAdController_landscape.xib */,
+				03FC181D134AF451005CF3D8 /* MXAdController_portrait.xib */,
+				03FC181E134AF451005CF3D8 /* TouchJSON */,
+			);
+			path = MXAdController;
+			sourceTree = "<group>";
+		};
+		03FC1814134AF451005CF3D8 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				03FC1815134AF451005CF3D8 /* AdMobDelegateProtocol.h */,
+				03FC1816134AF451005CF3D8 /* AdMobInterstitialAd.h */,
+				03FC1817134AF451005CF3D8 /* AdMobInterstitialDelegateProtocol.h */,
+				03FC1818134AF451005CF3D8 /* AdMobView.h */,
+				03FC1819134AF451005CF3D8 /* libAdMob.a */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
+		03FC181E134AF451005CF3D8 /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				03FC181F134AF451005CF3D8 /* CDataScanner.h */,
+				03FC1820134AF451005CF3D8 /* CDataScanner.m */,
+				03FC1821134AF451005CF3D8 /* Extensions */,
+				03FC182A134AF451005CF3D8 /* JSON */,
+			);
+			path = TouchJSON;
+			sourceTree = "<group>";
+		};
+		03FC1821134AF451005CF3D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03FC1822134AF451005CF3D8 /* CDataScanner_Extensions.h */,
+				03FC1823134AF451005CF3D8 /* CDataScanner_Extensions.m */,
+				03FC1824134AF451005CF3D8 /* NSCharacterSet_Extensions.h */,
+				03FC1825134AF451005CF3D8 /* NSCharacterSet_Extensions.m */,
+				03FC1826134AF451005CF3D8 /* NSDictionary_JSONExtensions.h */,
+				03FC1827134AF451005CF3D8 /* NSDictionary_JSONExtensions.m */,
+				03FC1828134AF451005CF3D8 /* NSScanner_Extensions.h */,
+				03FC1829134AF451005CF3D8 /* NSScanner_Extensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03FC182A134AF451005CF3D8 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				03FC182B134AF451005CF3D8 /* CJSONDeserializer.h */,
+				03FC182C134AF451005CF3D8 /* CJSONDeserializer.m */,
+				03FC182D134AF451005CF3D8 /* CJSONScanner.h */,
+				03FC182E134AF451005CF3D8 /* CJSONScanner.m */,
+				03FC182F134AF451005CF3D8 /* CJSONSerializer.h */,
+				03FC1830134AF451005CF3D8 /* CJSONSerializer.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -719,6 +826,8 @@
 				033F470B13434DC600E8BCE5 /* 79-medical-bag@2x.png in Resources */,
 				039F2B4913449ECC006A980D /* Icon.png in Resources */,
 				039F2B4C13449ED2006A980D /* Icon@2x.png in Resources */,
+				03FC1833134AF451005CF3D8 /* MXAdController_landscape.xib in Resources */,
+				03FC1834134AF451005CF3D8 /* MXAdController_portrait.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +891,15 @@
 				0343615D1343206C008D1A69 /* PreferencesViewController.m in Sources */,
 				033F46ED1343452A00E8BCE5 /* HelpViewController.m in Sources */,
 				033F46F6134347D600E8BCE5 /* HelpDetailViewController.m in Sources */,
+				03FC1832134AF451005CF3D8 /* MXAdController.m in Sources */,
+				03FC1835134AF451005CF3D8 /* CDataScanner.m in Sources */,
+				03FC1836134AF451005CF3D8 /* CDataScanner_Extensions.m in Sources */,
+				03FC1837134AF451005CF3D8 /* NSCharacterSet_Extensions.m in Sources */,
+				03FC1838134AF451005CF3D8 /* NSDictionary_JSONExtensions.m in Sources */,
+				03FC1839134AF451005CF3D8 /* NSScanner_Extensions.m in Sources */,
+				03FC183A134AF451005CF3D8 /* CJSONDeserializer.m in Sources */,
+				03FC183B134AF451005CF3D8 /* CJSONScanner.m in Sources */,
+				03FC183C134AF451005CF3D8 /* CJSONSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +966,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
 				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MemeYourself/MXAdController/AdMob\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -861,6 +983,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
 				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MemeYourself/MXAdController/AdMob\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
