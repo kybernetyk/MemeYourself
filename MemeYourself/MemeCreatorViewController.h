@@ -23,7 +23,6 @@
 	NSString *currentFilename;
 	
 	MXAdController *adController;
-	
 	IBOutlet UIView *adView;
 }
 @property (retain) IBOutlet UIImageView *imageView;

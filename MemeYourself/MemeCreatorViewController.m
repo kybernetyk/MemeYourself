@@ -66,6 +66,8 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	self.imageView = nil;
+	[adController release];
+	adController = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

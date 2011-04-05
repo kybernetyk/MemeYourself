@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MXAdController.h"
 @interface MemeArchiveViewController : UIViewController 
 {
 	UIScrollView *scrollView;
-	
 	NSMutableDictionary *filenames;
 	
 	BOOL needsRefresh;
 	
 	int selectedTag;
+	
+	MXAdController *adController;
+	IBOutlet UIView *adView;
 }
 
 @property (retain) IBOutlet UIScrollView *scrollView;

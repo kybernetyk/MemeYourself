@@ -167,6 +167,12 @@ enum JPImagePickerControllerPreviewImageSize {
     // Do any additional setup after loading the view from its nib.
 	
 	needsRefresh = YES;
+	if (!adController)
+	{
+		adController = [[MXAdController alloc] initWithNibName: @"MXAdController_portrait" bundle: nil];
+		[adController setSuperViewController: self];
+		[adView addSubview: [adController view]];
+	}
 }
 
 - (void) buttonTouched: (id) sender
@@ -192,6 +198,9 @@ enum JPImagePickerControllerPreviewImageSize {
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	self.scrollView = nil;
+	[adController release];
+	adController = nil;
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
