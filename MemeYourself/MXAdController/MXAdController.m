@@ -1,4 +1,3 @@
-#ifdef USE_ADS
 //
 //  MoneyViewController.m
 //  Mega Fill-Up Lite
@@ -11,7 +10,6 @@
 #import "MXAdController.h"
 #import "AdMobView.h"
 #import "AdMobDelegateProtocol.h"
-#import "SystemConfig.h"
 extern BOOL g_is_online;
 
 @implementation MXAdController
@@ -29,7 +27,7 @@ extern BOOL g_is_online;
 */
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-	return NO;
+	return (UIInterfaceOrientationPortrait == interfaceOrientation);
 	
 #ifdef ORIENTATION_LANDSCAPE_LOCKED
 	if (interfaceOrientation ==  UIInterfaceOrientationLandscapeRight)
@@ -66,12 +64,12 @@ extern BOOL g_is_online;
 	//what a fucking hack
 	//brings our adview to front every 0.5 sec
 	//because it could be somewhere behind a menu screen :]]]]]
-	if (!adFrontTimer)
-		adFrontTimer = [[NSTimer scheduledTimerWithTimeInterval: 1.0 
-														 target: self 
-													   selector: @selector(bringToFront)
-													   userInfo: nil 
-														repeats: YES] retain];
+//	if (!adFrontTimer)
+//		adFrontTimer = [[NSTimer scheduledTimerWithTimeInterval: 1.0 
+//														 target: self 
+//													   selector: @selector(bringToFront)
+//													   userInfo: nil 
+//														repeats: YES] retain];
 }
 
 - (void) bringToFront
@@ -92,7 +90,8 @@ extern BOOL g_is_online;
 //	[[[[self parentViewController] view] superview] bringSubviewToFront: [[self parentViewController] view]];
 	//[[[self view] superview] bringSubviewToFront: [self view]];
 	
-	
+	NSLog(@"can_show_iad: %i", can_show_iad);
+	NSLog(@"can_show_admob: %i", can_show_admob);
 	NSLog(@"is online? %i", g_is_online);
 	if (!g_is_online)
 	{
@@ -100,9 +99,6 @@ extern BOOL g_is_online;
 		
 		return;
 	}
-
-	NSLog(@"can_show_iad: %i", can_show_iad);
-	NSLog(@"can_show_admob: %i", can_show_admob);
 	
 	if (can_show_iad)
 	{
@@ -151,7 +147,7 @@ extern BOOL g_is_online;
 	NSLog(@"LOL!");
 	//[[BCAchievementNotificationCenter defaultCenter] notifyWithTitle:@"Yo Dawg!" message:@"Sup dawg?" image: [UIImage imageNamed: @"Icon.png"]];
 	
-	[[UIApplication sharedApplication] openURL: [NSURL URLWithString: HOUSEAD_TARGET_URL]];
+	[[UIApplication sharedApplication] openURL: [NSURL URLWithString: @"http://itunes.apple.com/us/app/meme-yourself-pro/id429650703?mt=8&ls=1"]];
 	
 }
 
@@ -423,4 +419,3 @@ extern BOOL g_is_online;
 
 @end
 
-#endif

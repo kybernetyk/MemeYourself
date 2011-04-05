@@ -115,6 +115,8 @@
 		03FC183B134AF451005CF3D8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC182E134AF451005CF3D8 /* CJSONScanner.m */; };
 		03FC183C134AF451005CF3D8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC1830134AF451005CF3D8 /* CJSONSerializer.m */; };
 		03FC183E134AF47D005CF3D8 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC183D134AF47D005CF3D8 /* iAd.framework */; };
+		03FC1840134AF908005CF3D8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC183F134AF908005CF3D8 /* QuartzCore.framework */; };
+		03FC1848134AF92E005CF3D8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC1847134AF92E005CF3D8 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -301,6 +303,8 @@
 		03FC182F134AF451005CF3D8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		03FC1830134AF451005CF3D8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		03FC183D134AF47D005CF3D8 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		03FC183F134AF908005CF3D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		03FC1847134AF92E005CF3D8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +312,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FC1848134AF92E005CF3D8 /* MediaPlayer.framework in Frameworks */,
+				03FC1840134AF908005CF3D8 /* QuartzCore.framework in Frameworks */,
 				03FC183E134AF47D005CF3D8 /* iAd.framework in Frameworks */,
 				0395C5DE13423754007C2A22 /* libz.dylib in Frameworks */,
 				0395C5DC13423748007C2A22 /* MobileCoreServices.framework in Frameworks */,
@@ -540,6 +546,8 @@
 		03B109401340780900987B77 = {
 			isa = PBXGroup;
 			children = (
+				03FC1847134AF92E005CF3D8 /* MediaPlayer.framework */,
+				03FC183F134AF908005CF3D8 /* QuartzCore.framework */,
 				03FC183D134AF47D005CF3D8 /* iAd.framework */,
 				039F2B4B13449ED2006A980D /* Icon@2x.png */,
 				039F2B4813449ECC006A980D /* Icon.png */,

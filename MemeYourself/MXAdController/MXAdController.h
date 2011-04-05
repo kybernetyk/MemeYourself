@@ -1,4 +1,3 @@
-#ifdef USE_ADS
 //
 //  MoneyViewController.h
 //  Mega Fill-Up Lite
@@ -39,4 +38,3 @@
 - (IBAction) openHouseAd: (id) sender;
 
 @end
-#endif

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MXOutlineLabel.h"
-
+#import "MXAdController.h"
 @interface MemeCreatorViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 {
     IBOutlet MXOutlineLabel *upperLabel;
@@ -21,6 +21,10 @@
 	UIImageView *imageView;
 	
 	NSString *currentFilename;
+	
+	MXAdController *adController;
+	
+	IBOutlet UIView *adView;
 }
 @property (retain) IBOutlet UIImageView *imageView;
 

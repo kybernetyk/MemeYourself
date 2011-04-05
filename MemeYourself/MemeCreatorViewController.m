@@ -44,14 +44,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-	[lowerLabel setFont: [UIFont fontWithName: @"Arial-BoldMT" size: 24.0]];
-	[upperLabel setFont: [UIFont fontWithName: @"Arial-BoldMT" size: 24.0]];
-	[lowerLabel setOutlineSize: 6];
-	[upperLabel setOutlineSize: 6];
+	[lowerLabel setFont: [UIFont fontWithName: @"Arial-BoldMT" size: 18.0]];
+	[upperLabel setFont: [UIFont fontWithName: @"Arial-BoldMT" size: 18.0]];
+	[lowerLabel setOutlineSize: 4];
+	[upperLabel setOutlineSize: 4];
 	
 	NSLog(@"%@", lowerLabel);
 	NSLog(@"%f", [lowerLabel outlineSize]);
 
+	if (!adController)
+	{
+		adController = [[MXAdController alloc] initWithNibName: @"MXAdController_portrait" bundle: nil];
+		[adController setSuperViewController: self];
+		[adView addSubview: [adController view]];
+	}
 }
 
 - (void)viewDidUnload

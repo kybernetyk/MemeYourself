@@ -8,6 +8,8 @@
 
 #import "MemeYourselfAppDelegate.h"
 
+BOOL g_is_online = YES;
+
 @implementation MemeYourselfAppDelegate
 
 
