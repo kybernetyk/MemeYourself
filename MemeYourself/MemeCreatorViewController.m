@@ -14,6 +14,21 @@
 @implementation MemeCreatorViewController
 @synthesize imageView;
 @synthesize currentFilename;
+@synthesize adView;
+
+- (void) viewDidDisappear:(BOOL)animated
+{
+	NSLog(@"adview: %@", [self adView]);
+	NSLog(@"%@", [NSValue valueWithCGRect: [self.adView frame]]);
+	[super viewDidDisappear: animated];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+	NSLog(@"adview: %@", [self adView]);
+	NSLog(@"%@", [NSValue valueWithCGRect: [self.adView frame]]);
+	[super viewDidAppear: animated];	
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,7 +71,7 @@
 	{
 		adController = [[MXAdController alloc] initWithNibName: @"MXAdController_portrait" bundle: nil];
 		[adController setSuperViewController: self];
-		[adView addSubview: [adController view]];
+		[[self adView] addSubview: [adController view]];
 	}
 }
 
@@ -66,6 +81,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	self.imageView = nil;
+	[self setAdView: nil];
 	[adController release];
 	adController = nil;
 }

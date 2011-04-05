@@ -29,6 +29,8 @@
 	BOOL is_admob_showing;
 	
 	UIViewController *superViewController;
+	
+	CGRect backuppos;
 }
 
 @property (readwrite, retain) IBOutlet UIButton *houseadButton;

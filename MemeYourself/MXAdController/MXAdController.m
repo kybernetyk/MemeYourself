@@ -27,7 +27,7 @@ extern BOOL g_is_online;
 */
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
-	return (UIInterfaceOrientationPortrait == interfaceOrientation);
+ 	return (UIInterfaceOrientationPortrait == interfaceOrientation);
 	
 #ifdef ORIENTATION_LANDSCAPE_LOCKED
 	if (interfaceOrientation ==  UIInterfaceOrientationLandscapeRight)
@@ -53,6 +53,8 @@ extern BOOL g_is_online;
 	adMobAd = [AdMobView requestAdWithDelegate: self];
 	[adMobAd retain];
 
+	backuppos = [[self view] frame];
+	
 	[self showAnAd];	
 	
 	if (!refreshTimer)
@@ -72,20 +74,20 @@ extern BOOL g_is_online;
 //														repeats: YES] retain];
 }
 
-- (void) bringToFront
-{
-	id test = [[[[[self view] superview] superview] subviews] lastObject];
-	if (test != [[self view] superview])
-	{
-		[[[[self view] superview] superview] bringSubviewToFront: [[self view] superview]];	
-		NSLog(@"bringing the shit!");
-	}
-}
+//- (void) bringToFront
+//{
+//	id test = [[[[[self view] superview] superview] subviews] lastObject];
+//	if (test != [[self view] superview])
+//	{
+//		[[[[self view] superview] superview] bringSubviewToFront: [[self view] superview]];	
+//		NSLog(@"bringing the shit!");
+//	}
+//}
 
 - (void) showAnAd
 {
 	//Mainviewcontroller.view -> mainviewcontroller.adview
-	[self bringToFront];
+//	[self bringToFront];
 
 //	[[[[self parentViewController] view] superview] bringSubviewToFront: [[self parentViewController] view]];
 	//[[[self view] superview] bringSubviewToFront: [self view]];
@@ -160,15 +162,6 @@ extern BOOL g_is_online;
 	[self hideAdMob];
 	
 	[iAdView setHidden: NO];
-	
-/*(	CGRect frame;
-	frame.origin.x = 0.0;
-	frame.origin.y = 0.0;
-	frame.size.width = 480;
-	frame.size.height = 32;
-	
-	[iAdView setFrame: frame];*/
-	
 	
 }
 
@@ -294,31 +287,31 @@ extern BOOL g_is_online;
 - (void)didReceiveAd:(AdMobView *)adView 
 {
 	NSLog(@"AdMob: Did receive ad");
-#ifdef ORIENTATION_LANDSCAPE
-	// get the view frame
+//#ifdef ORIENTATION_LANDSCAPE
+//	// get the view frame
+////	CGRect frame = self.view.frame;
+//	
+//	// put the ad at the bottom of the screen
+//	//adMobAd.frame = CGRectMake(0, frame.size.height - 48, frame.size.width, 48);
+//	
 //	CGRect frame = self.view.frame;
-	
-	// put the ad at the bottom of the screen
-	//adMobAd.frame = CGRectMake(0, frame.size.height - 48, frame.size.width, 48);
-	
-	CGRect frame = self.view.frame;
-	frame.origin.x = 0.0;
-	frame.origin.y = 0.0;
-	frame.size.width = 480.0;
-	frame.size.height = 32.0;
-	
-	// put the ad at the bottom of the screen
-	//adMobAd.frame = CGRectMake(0, frame.size.height - 48, frame.size.width, 48);
-	adMobAd.frame = frame;
-	
-	//		CGAffineTransform makeLandscape = CGAffineTransformMakeRotation(degreesToRadians(0));
-	//	makeLandscape = CGAffineTransformTranslate(makeLandscape, -480/2 + 48/2, 320/2 - 48/2 - 12);
-	CGAffineTransform makeLandscape = CGAffineTransformMakeScale(1.5, 32.0/48.0);
-	
-	//CGAffineTransformScale(makeLandscape, 480.0/320, 480.0/320);
-	adMobAd.transform = makeLandscape;
-	
-#endif
+//	frame.origin.x = 0.0;
+//	frame.origin.y = 0.0;
+//	frame.size.width = 480.0;
+//	frame.size.height = 32.0;
+//	
+//	// put the ad at the bottom of the screen
+//	//adMobAd.frame = CGRectMake(0, frame.size.height - 48, frame.size.width, 48);
+//	adMobAd.frame = frame;
+//	
+//	//		CGAffineTransform makeLandscape = CGAffineTransformMakeRotation(degreesToRadians(0));
+//	//	makeLandscape = CGAffineTransformTranslate(makeLandscape, -480/2 + 48/2, 320/2 - 48/2 - 12);
+//	CGAffineTransform makeLandscape = CGAffineTransformMakeScale(1.5, 32.0/48.0);
+//	
+//	//CGAffineTransformScale(makeLandscape, 480.0/320, 480.0/320);
+//	adMobAd.transform = makeLandscape;
+//	
+//#endif
 	
 	[self.view addSubview:adMobAd];
 	[adMobAd setHidden: YES];
@@ -404,6 +397,9 @@ extern BOOL g_is_online;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	[[self view] removeFromSuperview];
+	[self setHouseadButton: nil];
+	[self setIAdView: nil];
 }
 
 
@@ -411,11 +407,6 @@ extern BOOL g_is_online;
     [super dealloc];
 }
 
-- (void) viewDidDisappear:(BOOL)animated 
-{
-	NSLog(@"viewDidDisappear disappeared!");
-	//[[[[self view] superview] superview] bringSubviewToFront: [[self view] superview]];
-}
 
 @end
 

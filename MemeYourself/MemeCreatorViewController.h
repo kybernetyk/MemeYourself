@@ -23,11 +23,11 @@
 	NSString *currentFilename;
 	
 	MXAdController *adController;
-	IBOutlet UIView *adView;
+	UIView *adView;
 }
 @property (retain) IBOutlet UIImageView *imageView;
-
 @property (readwrite, retain) NSString *currentFilename;
+@property (retain) IBOutlet UIView *adView;
 
 - (IBAction) takePicture: (id) sender;
 
