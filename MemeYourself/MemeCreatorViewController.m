@@ -16,19 +16,6 @@
 @synthesize currentFilename;
 @synthesize adView;
 
-- (void) viewDidDisappear:(BOOL)animated
-{
-	NSLog(@"adview: %@", [self adView]);
-	NSLog(@"%@", [NSValue valueWithCGRect: [self.adView frame]]);
-	[super viewDidDisappear: animated];
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-	NSLog(@"adview: %@", [self adView]);
-	NSLog(@"%@", [NSValue valueWithCGRect: [self.adView frame]]);
-	[super viewDidAppear: animated];	
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -365,6 +352,7 @@
 
 - (void) save:(id)sender
 {
+	[[[UIApplication sharedApplication] delegate] increaseBadge];
 	CGSize s = [[imageView image] size];
 	NSLog(@"%f - %f", s.width, s.height);
 	

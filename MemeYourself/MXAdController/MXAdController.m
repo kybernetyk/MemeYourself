@@ -133,7 +133,7 @@ extern BOOL g_is_online;
 
 	UIImage *img = nil;
 	
-	img = [UIImage imageNamed: [NSString stringWithFormat: @"housead_%i.png", (lasthousead+1)]];
+	img = [UIImage imageNamed: [NSString stringWithFormat: @"mmy_%i.png", (lasthousead+1)]];
 	
 	[houseadButton setImage: img forState: UIControlStateNormal];
 }

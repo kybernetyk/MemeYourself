@@ -28,6 +28,9 @@
 		030E94821341D07B0007A133 /* MemeTemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 030E94801341D07B0007A133 /* MemeTemplateViewController.xib */; };
 		030E94841341D2D10007A133 /* templates in Resources */ = {isa = PBXBuildFile; fileRef = 030E94831341D2CF0007A133 /* templates */; };
 		030E94881341F0430007A133 /* VZImgurUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 030E94871341F0430007A133 /* VZImgurUpload.m */; };
+		030F2A6B134B19DB005C3DD5 /* mmy_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 030F2A68134B19DB005C3DD5 /* mmy_1.png */; };
+		030F2A6C134B19DB005C3DD5 /* mmy_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 030F2A69134B19DB005C3DD5 /* mmy_2.png */; };
+		030F2A6D134B19DB005C3DD5 /* mmy_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 030F2A6A134B19DB005C3DD5 /* mmy_3.png */; };
 		033F46D61343340600E8BCE5 /* takeapicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D41343340600E8BCE5 /* takeapicture.png */; };
 		033F46D71343340600E8BCE5 /* takeapicture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D51343340600E8BCE5 /* takeapicture@2x.png */; };
 		033F46DB134337FC00E8BCE5 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 033F46D9134337FC00E8BCE5 /* 20-gear2.png */; };
@@ -80,6 +83,12 @@
 		0395C5DC13423748007C2A22 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395C5DB13423748007C2A22 /* MobileCoreServices.framework */; };
 		0395C5DE13423754007C2A22 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395C5DD13423754007C2A22 /* libz.dylib */; };
 		0395C5E11342404D007C2A22 /* NSString+Slice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395C5E01342404D007C2A22 /* NSString+Slice.m */; };
+		039DA7DA134B160400DAFB9C /* 29-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 039DA7D8134B160400DAFB9C /* 29-heart.png */; };
+		039DA7DB134B160400DAFB9C /* 29-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039DA7D9134B160400DAFB9C /* 29-heart@2x.png */; };
+		039DA7E0134B162F00DAFB9C /* RemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039DA7DE134B162F00DAFB9C /* RemoveAdsViewController.m */; };
+		039DA7E1134B162F00DAFB9C /* RemoveAdsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 039DA7DF134B162F00DAFB9C /* RemoveAdsViewController.xib */; };
+		039DA7E3134B179F00DAFB9C /* rich.png in Resources */ = {isa = PBXBuildFile; fileRef = 039DA7E2134B179F00DAFB9C /* rich.png */; };
+		039DA7E5134B17A200DAFB9C /* rich@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039DA7E4134B17A200DAFB9C /* rich@2x.png */; };
 		039F2B4913449ECC006A980D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F2B4813449ECC006A980D /* Icon.png */; };
 		039F2B4C13449ED2006A980D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F2B4B13449ED2006A980D /* Icon@2x.png */; };
 		03B109501340780900987B77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B1094F1340780900987B77 /* UIKit.framework */; };
@@ -161,6 +170,9 @@
 		030E94831341D2CF0007A133 /* templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = templates; sourceTree = "<group>"; };
 		030E94861341F0430007A133 /* VZImgurUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VZImgurUpload.h; sourceTree = "<group>"; };
 		030E94871341F0430007A133 /* VZImgurUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VZImgurUpload.m; sourceTree = "<group>"; };
+		030F2A68134B19DB005C3DD5 /* mmy_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmy_1.png; sourceTree = "<group>"; };
+		030F2A69134B19DB005C3DD5 /* mmy_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmy_2.png; sourceTree = "<group>"; };
+		030F2A6A134B19DB005C3DD5 /* mmy_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mmy_3.png; sourceTree = "<group>"; };
 		033F46D41343340600E8BCE5 /* takeapicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takeapicture.png; sourceTree = "<group>"; };
 		033F46D51343340600E8BCE5 /* takeapicture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takeapicture@2x.png"; sourceTree = "<group>"; };
 		033F46D9134337FC00E8BCE5 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
@@ -245,6 +257,13 @@
 		0395C5DD13423754007C2A22 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0395C5DF13424047007C2A22 /* NSString+Slice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Slice.h"; sourceTree = "<group>"; };
 		0395C5E01342404D007C2A22 /* NSString+Slice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Slice.m"; sourceTree = "<group>"; };
+		039DA7D8134B160400DAFB9C /* 29-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart.png"; sourceTree = "<group>"; };
+		039DA7D9134B160400DAFB9C /* 29-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart@2x.png"; sourceTree = "<group>"; };
+		039DA7DD134B162F00DAFB9C /* RemoveAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveAdsViewController.h; sourceTree = "<group>"; };
+		039DA7DE134B162F00DAFB9C /* RemoveAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveAdsViewController.m; sourceTree = "<group>"; };
+		039DA7DF134B162F00DAFB9C /* RemoveAdsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemoveAdsViewController.xib; sourceTree = "<group>"; };
+		039DA7E2134B179F00DAFB9C /* rich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rich.png; sourceTree = "<group>"; };
+		039DA7E4134B17A200DAFB9C /* rich@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rich@2x.png"; sourceTree = "<group>"; };
 		039F2B4813449ECC006A980D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		039F2B4B13449ED2006A980D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		03B1094B1340780900987B77 /* MemeYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -547,6 +566,18 @@
 			path = S3;
 			sourceTree = "<group>";
 		};
+		039DA7DC134B161E00DAFB9C /* Remove Ads */ = {
+			isa = PBXGroup;
+			children = (
+				039DA7E4134B17A200DAFB9C /* rich@2x.png */,
+				039DA7E2134B179F00DAFB9C /* rich.png */,
+				039DA7DD134B162F00DAFB9C /* RemoveAdsViewController.h */,
+				039DA7DE134B162F00DAFB9C /* RemoveAdsViewController.m */,
+				039DA7DF134B162F00DAFB9C /* RemoveAdsViewController.xib */,
+			);
+			name = "Remove Ads";
+			sourceTree = "<group>";
+		};
 		03B109401340780900987B77 = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +621,7 @@
 		03B109551340780900987B77 /* MemeYourself */ = {
 			isa = PBXGroup;
 			children = (
+				039DA7DC134B161E00DAFB9C /* Remove Ads */,
 				033F46E91343451300E8BCE5 /* help view controller */,
 				0343615813432058008D1A69 /* Preferences View */,
 				0395C58013422E63007C2A22 /* Reddit Share */,
@@ -609,6 +641,8 @@
 		03B109561340780900987B77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				039DA7D8134B160400DAFB9C /* 29-heart.png */,
+				039DA7D9134B160400DAFB9C /* 29-heart@2x.png */,
 				03FC1813134AF451005CF3D8 /* MXAdController */,
 				033F470813434DC600E8BCE5 /* 79-medical-bag.png */,
 				033F470913434DC600E8BCE5 /* 79-medical-bag@2x.png */,
@@ -699,6 +733,9 @@
 		03FC1813134AF451005CF3D8 /* MXAdController */ = {
 			isa = PBXGroup;
 			children = (
+				030F2A68134B19DB005C3DD5 /* mmy_1.png */,
+				030F2A69134B19DB005C3DD5 /* mmy_2.png */,
+				030F2A6A134B19DB005C3DD5 /* mmy_3.png */,
 				03FC1814134AF451005CF3D8 /* AdMob */,
 				03FC181A134AF451005CF3D8 /* MXAdController.h */,
 				03FC181B134AF451005CF3D8 /* MXAdController.m */,
@@ -842,6 +879,14 @@
 				039F2B4C13449ED2006A980D /* Icon@2x.png in Resources */,
 				03FC1833134AF451005CF3D8 /* MXAdController_landscape.xib in Resources */,
 				03FC1834134AF451005CF3D8 /* MXAdController_portrait.xib in Resources */,
+				039DA7DA134B160400DAFB9C /* 29-heart.png in Resources */,
+				039DA7DB134B160400DAFB9C /* 29-heart@2x.png in Resources */,
+				039DA7E1134B162F00DAFB9C /* RemoveAdsViewController.xib in Resources */,
+				039DA7E3134B179F00DAFB9C /* rich.png in Resources */,
+				039DA7E5134B17A200DAFB9C /* rich@2x.png in Resources */,
+				030F2A6B134B19DB005C3DD5 /* mmy_1.png in Resources */,
+				030F2A6C134B19DB005C3DD5 /* mmy_2.png in Resources */,
+				030F2A6D134B19DB005C3DD5 /* mmy_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +959,7 @@
 				03FC183A134AF451005CF3D8 /* CJSONDeserializer.m in Sources */,
 				03FC183B134AF451005CF3D8 /* CJSONScanner.m in Sources */,
 				03FC183C134AF451005CF3D8 /* CJSONSerializer.m in Sources */,
+				039DA7E0134B162F00DAFB9C /* RemoveAdsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +1026,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
 				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/MemeYourself/MXAdController/AdMob\"",
@@ -997,6 +1044,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MemeYourself/MemeYourself-Prefix.pch";
 				INFOPLIST_FILE = "MemeYourself/MemeYourself-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/MemeYourself/MXAdController/AdMob\"",

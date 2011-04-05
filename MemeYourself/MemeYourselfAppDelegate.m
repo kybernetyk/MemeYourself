@@ -22,9 +22,11 @@ BOOL g_is_online = YES;
 	srand(time(0));
 	
 //	- (BOOL)createDirectoryAtPath:(NSString *)path withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error
+	
 
 	[[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:
 															  [NSNumber numberWithInt: kImgur], @"hoster",
+															  [NSNumber numberWithInt: 0], @"badge",
 															  nil]];
 	
 	NSError **err = nil;
@@ -35,6 +37,12 @@ BOOL g_is_online = YES;
 	// Add the tab bar controller's current view as a subview of the window
 	self.window.rootViewController = self.tabBarController;
 	[self.window makeKeyAndVisible];
+
+	NSInteger i = [[NSUserDefaults standardUserDefaults] integerForKey: @"badge"];
+	if (i > 0)
+		[adsItem setBadgeValue: [NSString stringWithFormat: @"%i", i]];
+
+	
     return YES;
 }
 
@@ -125,6 +133,24 @@ BOOL g_is_online = YES;
 	return [facebookController handleOpenURL: url];
 	
 	return YES;
+}
+
+- (void) increaseBadge
+{
+	NSInteger i = [[adsItem badgeValue] intValue];
+	i++;
+	[adsItem setBadgeValue: [NSString stringWithFormat: @"%i", i]];
+	[[NSUserDefaults standardUserDefaults] setInteger: i forKey: @"badge"];
+	
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void) resetBadge
+{
+	[adsItem setBadgeValue: nil];
+	
+	[[NSUserDefaults standardUserDefaults] setInteger: 0 forKey: @"badge"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

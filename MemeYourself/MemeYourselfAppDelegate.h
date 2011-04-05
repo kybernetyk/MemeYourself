@@ -12,6 +12,8 @@
 @interface MemeYourselfAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> 
 {
 	FacebookSubmitController *facebookController;
+	
+	IBOutlet UITabBarItem *adsItem;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -20,5 +22,8 @@
 
 
 - (void) initFBShare: (id) datasource;
+
+- (void) increaseBadge;
+- (void) resetBadge;
 
 @end
